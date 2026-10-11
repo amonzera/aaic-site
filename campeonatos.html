@@ -1,81 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campeonatos - AAIC UFF Niterói</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo_fundo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campeonatos · AAIC UFF</title>
+  <meta name="description" content="Campeonatos da AAIC UFF, com inscrições abertas para o Campeonato Interno de E-Sports.">
+  <link rel="canonical" href="https://aaic.com.br/campeonatos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAIC UFF">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Campeonatos · AAIC UFF">
+  <meta property="og:description" content="Campeonatos da AAIC UFF, com inscrições abertas para o Campeonato Interno de E-Sports.">
+  <meta property="og:url" content="https://aaic.com.br/campeonatos.html">
+  <!-- TODO(identidade): substituir a imagem de compartilhamento provisória quando a logo existir. -->
+  <meta property="og:image" content="https://aaic.com.br/assets/img/og.jpg">
+  <meta name="theme-color" content="#060807">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/castoro-titling-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/hanken-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20261011">
+  <script src="script.js?v=20261011" defer></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo"><img src="nome.png" alt="AAIC UFF"></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="times.html">Times</a></li>
-                <li><a href="campeonatos.html">Campeonatos</a></li>
-                <li><a href="trotes.html">Trotes</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="hamburger"><div class="bar line1"></div><div class="bar line2"></div><div class="bar line3"></div></div>
+<body class="page-campeonatos">
+  <!-- chrome:nav -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-nav" data-nav>
+    <nav class="nav-island" aria-label="Principal">
+      <!-- TODO(identidade): trocar a marca provisória "▽ AAIC" pela logo oficial (SVG, ~28 px de altura). -->
+      <a class="nav-brand" href="index.html" data-placeholder="logo-nav">
+        <span class="nav-brand-mark" aria-hidden="true">▽</span>
+        <span>AAIC</span>
+        <span class="sr-only">— página inicial</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-nav-toggle>
+        <span class="nav-toggle-bar nav-toggle-bar--top" aria-hidden="true"></span>
+        <span class="nav-toggle-bar nav-toggle-bar--bottom" aria-hidden="true"></span>
+      </button>
+      <div class="nav-panel" id="menu" data-nav-panel>
+        <ul class="nav-links" role="list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="times.html">Times</a></li>
+          <li class="nav-item"><a class="nav-link" href="campeonatos.html" aria-current="page">Campeonatos</a></li>
+          <li class="nav-item"><a class="nav-link" href="trotes.html">Trotes</a></li>
+          <li class="nav-item"><a class="nav-link" href="loja.html">Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-panel-meta">
+          <a class="nav-panel-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">@atleticaicuff<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="nav-panel-link" href="mailto:diretoria@aaic.com.br">diretoria@aaic.com.br</a>
         </div>
+      </div>
     </nav>
+  </header>
+  <!-- /chrome:nav -->
 
+  <main id="conteudo" tabindex="-1">
     <header class="page-header">
-        <div class="container">
-            <h1>Campeonatos</h1>
-            <p>Onde a Hidra mostra o seu veneno.</p>
-        </div>
+      <div class="container page-header-inner">
+        <p class="label"><a class="label-link" href="index.html">AAIC</a> <span aria-hidden="true">/</span> Campeonatos</p>
+        <h1 class="page-title">Campeonatos</h1>
+        <p class="page-lede">Onde a teoria vira jogada.</p>
+      </div>
     </header>
+    <!-- TODO(conteúdo): subtítulo provisório (substituiu "Onde a Hidra mostra o seu veneno"). -->
 
-    <section class="section championships">
-        <div class="container">
-            <!--<div class="champ-card">
-                <div class="champ-image">
-                    <img src="https://via.placeholder.com/600x400/333333/FFFFFF?text=InterUFF" alt="InterUFF">
-                </div>
-                <div class="champ-info">
-                    <span class="champ-date">Anual</span>
-                    <h3>InterUFF</h3>
-                    <p></p>
-                    <br>
-                    <a href="#" class="btn">Ver Resultados</a>
-                </div> 
-            </div>-->
-
-            <div class="champ-card">
-                <div class="champ-image">
-                    <img src="lleague.png" alt="Copa TI">
-                </div>
-                <div class="champ-info">
-                    <span class="champ-date">Semestral</span>
-                    <h3>Campeonato Interno de E-Sports</h3>
-                    <p>Inscrições abertas!</p>
-                    <br>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7xX2kx362kwQ0MTw8ml7Ia0H1G9NUqRv9_m_3YtnXrfiwCg/viewform" class="btn">Faça sua Inscrição!</a>
-                </div>
+    <section class="section" aria-labelledby="destaque-title">
+      <div class="container">
+        <article class="card champ-card" data-reveal>
+          <div class="card-core champ-card-core">
+            <div class="champ-card-media duotone">
+              <!-- TODO(identidade): arte da Lovelace League com a identidade antiga (roxa), exibida em duotone até existir arte nova. -->
+              <img class="champ-card-img duotone-img" src="assets/img/lleague-1200.webp" srcset="assets/img/lleague-640.webp 640w, assets/img/lleague-1200.webp 1080w" sizes="(min-width: 64rem) 55vw, 100vw" width="1080" height="1080" fetchpriority="high" alt="Arte de divulgação da Lovelace League, com o convite: venha competir conosco." decoding="async">
             </div>
-        </div>
+            <div class="champ-card-body">
+              <div class="champ-card-chips">
+                <span class="chip chip--live">Inscrições abertas</span>
+                <span class="chip chip--plain">Semestral</span>
+              </div>
+              <h2 class="champ-card-title" id="destaque-title">Campeonato Interno de E-Sports</h2>
+              <p class="champ-card-text">Disputado a cada semestre entre os alunos do Instituto de Computação. As inscrições estão abertas!</p>
+              <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc7xX2kx362kwQ0MTw8ml7Ia0H1G9NUqRv9_m_3YtnXrfiwCg/viewform" target="_blank" rel="noopener">Fazer inscrição<span class="sr-only"> (abre o formulário em nova aba)</span><span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-up-right"></use></svg></span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- InterUFF: descomente este bloco quando houver informações.
+        <article class="card champ-card" data-reveal>
+          <div class="card-core champ-card-core">
+            <div class="champ-card-media">
+              <img class="champ-card-img" src="assets/img/interuff-1200.webp" width="1200" height="750" alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="champ-card-body">
+              <div class="champ-card-chips"><span class="chip chip--plain">Anual</span></div>
+              <h2 class="champ-card-title">InterUFF</h2>
+              <p class="champ-card-text"></p>
+              <a class="btn" href="#">Ver resultados<span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-up-right"></use></svg></span></a>
+            </div>
+          </div>
+        </article>
+        -->
+
+        <p class="champ-note">Acompanhe os próximos campeonatos no <a href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">@atleticaicuff<span class="sr-only"> (abre em nova aba)</span></a>.</p>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-logo"><img src="logo-simples.png" alt="AAIC Logo"></div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p class="copyright">&copy; 2026 Associação Atlética do Instituto de Computação.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Instituto de Computação</p>
+  <!-- chrome:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <!-- TODO(identidade): trocar pela logo oficial (versão para fundo verde-escuro). -->
+          <a class="footer-wordmark" href="index.html" data-placeholder="logo-footer"><span class="footer-wordmark-mark" aria-hidden="true">▽</span>AAIC</a>
+          <p class="footer-tagline">Associação Atlética do Instituto de Computação da Universidade Federal Fluminense.</p>
+          <p class="footer-coords">22°54′S · 43°08′O</p>
         </div>
-    </footer>
-    <script src="script.js"></script>
+        <nav aria-label="Rodapé">
+          <h2 class="footer-title">Navegação</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="index.html">Início</a></li>
+            <li><a class="footer-link" href="sobre.html">Sobre</a></li>
+            <li><a class="footer-link" href="times.html">Times</a></li>
+            <li><a class="footer-link" href="campeonatos.html">Campeonatos</a></li>
+            <li><a class="footer-link" href="trotes.html">Trotes</a></li>
+            <li><a class="footer-link" href="loja.html">Loja</a></li>
+            <li><a class="footer-link" href="eventos.html">Eventos</a></li>
+            <li><a class="footer-link" href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-title">Canais</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-mail"></use></svg>E-mail</a></li>
+            <!-- TODO(conteúdo): incluir Discord (convite), LinkedIn e outras redes quando houver links oficiais. -->
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Onde estamos</h2>
+          <address class="footer-text">Instituto de Computação · UFF<br>Campus da Praia Vermelha<br>Niterói · RJ</address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> AAIC · Associação Atlética do Instituto de Computação</p>
+        <p>Universidade Federal Fluminense</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /chrome:footer -->
 </body>
 </html>

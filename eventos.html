@@ -1,94 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos - AAIC UFF Niterói</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo_fundo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eventos · AAIC UFF</title>
+  <meta name="description" content="UFFEST, isoporzinho e churrasco: os eventos da Atlética do Instituto de Computação da UFF.">
+  <link rel="canonical" href="https://aaic.com.br/eventos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAIC UFF">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Eventos · AAIC UFF">
+  <meta property="og:description" content="UFFEST, isoporzinho e churrasco: os eventos da Atlética do Instituto de Computação da UFF.">
+  <meta property="og:url" content="https://aaic.com.br/eventos.html">
+  <!-- TODO(identidade): substituir a imagem de compartilhamento provisória quando a logo existir. -->
+  <meta property="og:image" content="https://aaic.com.br/assets/img/og.jpg">
+  <meta name="theme-color" content="#060807">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/castoro-titling-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/hanken-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20261011">
+  <script src="script.js?v=20261011" defer></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo"><img src="nome.png" alt="AAIC UFF"></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="times.html">Times</a></li>
-                <li><a href="campeonatos.html">Campeonatos</a></li>
-                <li><a href="trotes.html">Trotes</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="hamburger"><div class="bar line1"></div><div class="bar line2"></div><div class="bar line3"></div></div>
+<body class="page-eventos">
+  <!-- chrome:nav -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-nav" data-nav>
+    <nav class="nav-island" aria-label="Principal">
+      <!-- TODO(identidade): trocar a marca provisória "▽ AAIC" pela logo oficial (SVG, ~28 px de altura). -->
+      <a class="nav-brand" href="index.html" data-placeholder="logo-nav">
+        <span class="nav-brand-mark" aria-hidden="true">▽</span>
+        <span>AAIC</span>
+        <span class="sr-only">— página inicial</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-nav-toggle>
+        <span class="nav-toggle-bar nav-toggle-bar--top" aria-hidden="true"></span>
+        <span class="nav-toggle-bar nav-toggle-bar--bottom" aria-hidden="true"></span>
+      </button>
+      <div class="nav-panel" id="menu" data-nav-panel>
+        <ul class="nav-links" role="list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="times.html">Times</a></li>
+          <li class="nav-item"><a class="nav-link" href="campeonatos.html">Campeonatos</a></li>
+          <li class="nav-item"><a class="nav-link" href="trotes.html">Trotes</a></li>
+          <li class="nav-item"><a class="nav-link" href="loja.html">Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html" aria-current="page">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-panel-meta">
+          <a class="nav-panel-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">@atleticaicuff<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="nav-panel-link" href="mailto:diretoria@aaic.com.br">diretoria@aaic.com.br</a>
         </div>
+      </div>
     </nav>
+  </header>
+  <!-- /chrome:nav -->
 
+  <main id="conteudo" tabindex="-1">
     <header class="page-header">
-        <div class="container">
-            <h1>Próximos Eventos</h1>
-            <p>Isoporzinhos, Churrascos e Choppadas da Atlética.</p>
-        </div>
+      <div class="container page-header-inner">
+        <p class="label"><a class="label-link" href="index.html">AAIC</a> <span aria-hidden="true">/</span> Eventos</p>
+        <h1 class="page-title">Próximos eventos</h1>
+        <p class="page-lede">Isoporzinhos, churrascos e choppadas da atlética.</p>
+      </div>
     </header>
 
-    <section class="section events">
-        <div class="container">
-            <div class="event-grid">
-                <div class="event-card">
-                    <div class="event-image">
-                        <span class="event-date-badge">14<br>MAR</span>
-                        <img src="uffest.jpg" alt="Uffest">
-                    </div>
-                    <div class="event-details">
-                        <h3>UFFEST</h3>
-                        <p>A festa mais aguardada do semestre! Bebida barata, atrações incríveis e muita integração com a galera de mais 13 entidades parceiras.</p>
-                        <br>
-                        <a href="https://cheers.com.br/evento/uffest-2-edicao-29815" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: bold;">Garantir Ingresso &rarr;</a>
-                    </div>
+    <section class="section" aria-labelledby="agenda-title">
+      <div class="container">
+        <h2 class="sr-only" id="agenda-title">Agenda</h2>
+        <div class="event-grid">
+          <article class="event-item event-item--feature" data-reveal>
+            <div class="card event-card event-card--feature">
+              <div class="card-core event-card-core">
+                <div class="event-card-media">
+                  <img class="event-card-img" src="assets/img/uffest-1200.webp" srcset="assets/img/uffest-640.webp 640w, assets/img/uffest-1200.webp 1080w" sizes="(min-width: 64rem) 55vw, 100vw" width="1080" height="608" fetchpriority="high" alt="Arte da UFFEST: o nome da festa em letras cursivas sobre uma flor de hibisco vermelha." decoding="async">
+                  <!-- TODO(conteúdo): a UFFEST de 14/03 já aconteceu; atualizar a data ou trocar o destaque. -->
+                  <p class="event-date"><span class="event-date-day">14</span> mar</p>
                 </div>
-                <div class="event-card">
-                    <div class="event-image">
-                        <span class="event-date-badge">EM<br>BREVE</span>
-                        <img src="isoporzinho.JPG" alt="Isoporzinho">
-                    </div>
-                    <div class="event-details">
-                        <h3>Isoporzinho</h3>
-                        <p>Evento mais popular e conhecido das atléticas da UFF. Pegamos nosso isopor, nossas caixas de som e vamos para a Cantareira curtir a noite com muita resenha e música.</p>
-                        <br>
-                        <a href="#" style="color: var(--primary-color); font-weight: bold;">Saber mais &rarr;</a>
-                    </div>
+                <div class="event-card-body">
+                  <h3 class="event-card-title">UFFEST</h3>
+                  <p class="event-card-text">A festa mais aguardada do semestre! Bebida barata, atrações incríveis e muita integração com a galera de mais 13 entidades parceiras.</p>
+                  <a class="link-arrow" href="https://cheers.com.br/evento/uffest-2-edicao-29815" target="_blank" rel="noopener noreferrer">Garantir ingresso<span class="sr-only"> (abre em nova aba)</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-up-right"></use></svg></a>
                 </div>
-                <div class="event-card">
-                    <div class="event-image">
-                        <span class="event-date-badge">EM<br>BREVE</span>
-                        <img src="churrasco.jpeg" alt="Churrasco da Atlética">
-                    </div>
-                    <div class="event-details">
-                        <h3>Churrasco da Atlética</h3>
-                        <p>Nossa tradicional confraternização semestral com churrasco, bebida, piscina e muito mais!</p>
-                        <br>
-                        <a href="#" style="color: var(--primary-color); font-weight: bold;">Saber mais &rarr;</a>
-                    </div>
-                </div>
+              </div>
             </div>
-        </div>
-    </section>
+          </article>
 
-    <footer>
-        <div class="container">
-            <div class="footer-logo"><img src="logo-simples.png" alt="AAIC Logo"></div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <article class="event-item" data-reveal>
+            <div class="card event-card">
+              <div class="card-core event-card-core">
+                <div class="event-card-media">
+                  <img class="event-card-img" src="assets/img/isoporzinho-640.webp" srcset="assets/img/isoporzinho-640.webp 640w, assets/img/isoporzinho-1200.webp 1200w" sizes="(min-width: 64rem) 38vw, 100vw" width="1200" height="1200" alt="Estudante sorrindo no meio da multidão do isoporzinho, segurando a tabela de preços da barraca da Computação." loading="lazy" decoding="async">
+                  <p class="event-date">Em breve</p>
+                </div>
+                <div class="event-card-body">
+                  <h3 class="event-card-title">Isoporzinho</h3>
+                  <p class="event-card-text">Evento mais popular e conhecido das atléticas da UFF. Pegamos nosso isopor, nossas caixas de som e vamos para a Cantareira curtir a noite com muita resenha e música.</p>
+                  <!-- TODO(conteúdo): trocar pelo link do evento quando houver data. -->
+                  <a class="link-arrow" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">Saber mais no Instagram<span class="sr-only"> (abre em nova aba)</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-up-right"></use></svg></a>
+                </div>
+              </div>
             </div>
-            <p class="copyright">&copy; 2026 Associação Atlética do Instituto de Computação.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Instituto de Computação</p>
+          </article>
+
+          <article class="event-item" data-reveal>
+            <div class="card event-card">
+              <div class="card-core event-card-core">
+                <div class="event-card-media">
+                  <img class="event-card-img" src="assets/img/churrasco-1200.webp" srcset="assets/img/churrasco-640.webp 640w, assets/img/churrasco-1200.webp 1200w" sizes="(min-width: 64rem) 38vw, 100vw" width="1200" height="675" alt="Grupo de estudantes sorrindo em frente à bandeira roxa de uma atlética durante uma confraternização." loading="lazy" decoding="async">
+                  <p class="event-date">Em breve</p>
+                </div>
+                <div class="event-card-body">
+                  <h3 class="event-card-title">Churrasco da atlética</h3>
+                  <p class="event-card-text">Nossa tradicional confraternização semestral com churrasco, bebida, piscina e muito mais!</p>
+                  <!-- TODO(conteúdo): trocar pelo link do evento quando houver data. -->
+                  <a class="link-arrow" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">Saber mais no Instagram<span class="sr-only"> (abre em nova aba)</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-up-right"></use></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
-    </footer>
-    <script src="script.js"></script>
+      </div>
+    </section>
+  </main>
+
+  <!-- chrome:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <!-- TODO(identidade): trocar pela logo oficial (versão para fundo verde-escuro). -->
+          <a class="footer-wordmark" href="index.html" data-placeholder="logo-footer"><span class="footer-wordmark-mark" aria-hidden="true">▽</span>AAIC</a>
+          <p class="footer-tagline">Associação Atlética do Instituto de Computação da Universidade Federal Fluminense.</p>
+          <p class="footer-coords">22°54′S · 43°08′O</p>
+        </div>
+        <nav aria-label="Rodapé">
+          <h2 class="footer-title">Navegação</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="index.html">Início</a></li>
+            <li><a class="footer-link" href="sobre.html">Sobre</a></li>
+            <li><a class="footer-link" href="times.html">Times</a></li>
+            <li><a class="footer-link" href="campeonatos.html">Campeonatos</a></li>
+            <li><a class="footer-link" href="trotes.html">Trotes</a></li>
+            <li><a class="footer-link" href="loja.html">Loja</a></li>
+            <li><a class="footer-link" href="eventos.html">Eventos</a></li>
+            <li><a class="footer-link" href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-title">Canais</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-mail"></use></svg>E-mail</a></li>
+            <!-- TODO(conteúdo): incluir Discord (convite), LinkedIn e outras redes quando houver links oficiais. -->
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Onde estamos</h2>
+          <address class="footer-text">Instituto de Computação · UFF<br>Campus da Praia Vermelha<br>Niterói · RJ</address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> AAIC · Associação Atlética do Instituto de Computação</p>
+        <p>Universidade Federal Fluminense</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /chrome:footer -->
 </body>
 </html>
