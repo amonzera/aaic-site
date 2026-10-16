@@ -24,7 +24,7 @@ tipografia ainda é provisória. Tudo o que falta está marcado no código e lis
 │   ├── fonts/        ← fontes self-hosted (woff2) + licenças OFL
 │   ├── img/          ← imagens WebP (1200 e 640 px), limbo.svg, astrolabio.svg (sem JS)
 │   ├── icons.svg     ← sprite de ícones, pictogramas dos times e o monograma (#aaic-monograma)
-│   └── favicon.svg
+│   └── favicon.png
 ├── CNAME             ← domínio aaic.com.br (não mexer)
 └── .nojekyll         ← o Pages publica os arquivos como estão, sem passar pelo Jekyll
 ```
@@ -109,8 +109,8 @@ Os arquivos de origem ficam fora deste repositório, na pasta do projeto da AAIC
 
 | Item | Origem | Onde está no site |
 |---|---|---|
-| **Paleta oficial** | `#0A0A0A`, `#0F3D2E`, `#FFFFFF` (o cinza `#D9D9D9` não tem token) | Bloco IDENTIDADE do `style.css`, `theme-color` dos HTML, `favicon.svg` e `limbo.svg`. O acento menta (`--green-bright`) continua derivado do verde e fora da paleta: é decisão em aberto do kit. Se as cores mudarem, atualize também o valor de reserva dele, logo abaixo do bloco |
-| **Monograma** (logo primária) | `logos/1-primaria/monograma/svg/aaic-monograma-og-branco.svg` | Símbolo `#aaic-monograma` do sprite (nav e rodapé), constante `MONOGRAM` do `astrolabio.js` (eixo), `favicon.svg` e `apple-touch-icon.png`. Sempre em branco: verde sobre preto reprova no contraste (1,63:1) |
+| **Paleta oficial** | `#0A0A0A`, `#0F3D2E`, `#FFFFFF` (o cinza `#D9D9D9` não tem token) | Bloco IDENTIDADE do `style.css`, `theme-color` dos HTML, `favicon.png` e `limbo.svg`. O acento menta (`--green-bright`) continua derivado do verde e fora da paleta: é decisão em aberto do kit. Se as cores mudarem, atualize também o valor de reserva dele, logo abaixo do bloco |
+| **Monograma** (logo primária) | `logos/1-primaria/monograma/svg/aaic-monograma-og-branco.svg` | Símbolo `#aaic-monograma` do sprite (nav e rodapé), constante `MONOGRAM` do `astrolabio.js` (eixo), `favicon.png` e `apple-touch-icon.png`. Sempre em branco: verde sobre preto reprova no contraste (1,63:1) |
 | **Hipátia** (logo secundária) | `camisa/Versão Camisa Preta/Estampa Costas/Elementos/01-…` e `02-…png`, com o marfim trocado por branco | `hipatia-circulo-*.webp` (home) e `hipatia-*.webp` (sobre) |
 | **Camisa da AAIC** | `camisa/Versão Camisa Preta/Mockups/mockup-branco-no-preto-camisa-preta.jpg`, recorte quadrado das costas | `camisa-aaic-*.webp` (loja) |
 | **Imagem de compartilhamento** | Composição com a Hipátia e as fontes do site | `assets/img/og.jpg` (1200×630) |
