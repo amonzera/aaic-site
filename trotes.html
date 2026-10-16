@@ -1,86 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trotes - AAIC UFF Niterói</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo_fundo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trotes e integração · AAIC UFF</title>
+  <meta name="description" content="Na AAIC, trote é acolhimento: recepção dos calouros, trote solidário, apadrinhamento e integração no Instituto de Computação da UFF.">
+  <link rel="canonical" href="https://aaic.com.br/trotes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAIC UFF">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Trotes e integração · AAIC UFF">
+  <meta property="og:description" content="Na AAIC, trote é acolhimento: recepção dos calouros, trote solidário, apadrinhamento e integração no Instituto de Computação da UFF.">
+  <meta property="og:url" content="https://aaic.com.br/trotes.html">
+  <!-- TODO(identidade): substituir a imagem de compartilhamento provisória quando a logo existir. -->
+  <meta property="og:image" content="https://aaic.com.br/assets/img/og.jpg">
+  <meta name="theme-color" content="#060807">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/castoro-titling-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/hanken-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20261011">
+  <script src="script.js?v=20261011" defer></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo"><img src="nome.png" alt="AAIC UFF"></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="times.html">Times</a></li>
-                <li><a href="campeonatos.html">Campeonatos</a></li>
-                <li><a href="trotes.html">Trotes</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="hamburger"><div class="bar line1"></div><div class="bar line2"></div><div class="bar line3"></div></div>
+<body class="page-trotes">
+  <!-- chrome:nav -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-nav" data-nav>
+    <nav class="nav-island" aria-label="Principal">
+      <!-- TODO(identidade): trocar a marca provisória "▽ AAIC" pela logo oficial (SVG, ~28 px de altura). -->
+      <a class="nav-brand" href="index.html" data-placeholder="logo-nav">
+        <span class="nav-brand-mark" aria-hidden="true">▽</span>
+        <span>AAIC</span>
+        <span class="sr-only">— página inicial</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-nav-toggle>
+        <span class="nav-toggle-bar nav-toggle-bar--top" aria-hidden="true"></span>
+        <span class="nav-toggle-bar nav-toggle-bar--bottom" aria-hidden="true"></span>
+      </button>
+      <div class="nav-panel" id="menu" data-nav-panel>
+        <ul class="nav-links" role="list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="times.html">Times</a></li>
+          <li class="nav-item"><a class="nav-link" href="campeonatos.html">Campeonatos</a></li>
+          <li class="nav-item"><a class="nav-link" href="trotes.html" aria-current="page">Trotes</a></li>
+          <li class="nav-item"><a class="nav-link" href="loja.html">Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-panel-meta">
+          <a class="nav-panel-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">@atleticaicuff<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="nav-panel-link" href="mailto:diretoria@aaic.com.br">diretoria@aaic.com.br</a>
         </div>
+      </div>
     </nav>
+  </header>
+  <!-- /chrome:nav -->
 
+  <main id="conteudo" tabindex="-1">
     <header class="page-header">
-        <div class="container">
-            <h1>Trotes e Integração</h1>
-            <p>Bem-vindos ao Instituto de Computação!</p>
-        </div>
+      <div class="container page-header-inner">
+        <p class="label"><a class="label-link" href="index.html">AAIC</a> <span aria-hidden="true">/</span> Trotes</p>
+        <h1 class="page-title">Trotes e integração</h1>
+        <p class="page-lede">Bem-vindos ao Instituto de Computação!</p>
+      </div>
     </header>
 
-    <section class="section trotes">
-        <div class="container">
-            <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                A entrada na universidade é um momento único. Na AAIC, o trote é sinônimo de acolhimento, solidariedade e muita diversão. Repudiamos qualquer tipo de violência ou constrangimento. Aqui, o calouro já entra fazendo parte da família!
-            </p>
-            
-            <div class="timeline">
-                <div class="trote-card left">
-                    <div class="trote-content">
-                        <h3>Recepção dos Calouros</h3>
-                        <p>Apresentação da Universidade, tour pelo campus e as primeiras orientações para sobreviver às matérias de programação.</p>
-                    </div>
-                </div>
-                <div class="trote-card right">
-                    <div class="trote-content">
-                        <h3>Trote Solidário</h3>
-                        <p>Incentivamos a doação de sangue para instituições de caridade de Niterói. Fazer o bem também é papel do universitário!</p>
-                    </div>
-                </div>
-                <div class="trote-card left">
-                    <div class="trote-content">
-                        <h3>Apadrinhamento</h3>
-                        <p>Cada calouro recebe um "padrinho" ou "madrinha" veterano para ajudar com dicas de professores, matérias e a vida na UFF.</p>
-                    </div>
-                </div>
-                <div class="trote-card right">
-                    <div class="trote-content">
-                        <h3>Acolhimento</h3>
-                        <p>A reunião com a coordenação para apresentação do curso, Atlética e outras entidades. Aqui rola sorteios, resultado dos trotes e muito mais!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="section" aria-labelledby="etapas-title">
+      <div class="container">
+        <p class="trotes-manifesto">A entrada na universidade é um momento único. Na AAIC, o trote é sinônimo de acolhimento, solidariedade e muita diversão. <strong>Repudiamos qualquer tipo de violência ou constrangimento.</strong> Aqui, o calouro já entra fazendo parte da família!</p>
+        <h2 class="sr-only" id="etapas-title">Etapas da integração</h2>
+        <ol class="trote-path" role="list">
+          <li class="trote-step" data-reveal>
+            <span class="trote-step-index" aria-hidden="true">01</span>
+            <h3 class="trote-step-title">Recepção dos calouros</h3>
+            <p class="trote-step-text">Apresentação da Universidade, tour pelo campus e as primeiras orientações para sobreviver às matérias de programação.</p>
+          </li>
+          <li class="trote-step" data-reveal>
+            <span class="trote-step-index" aria-hidden="true">02</span>
+            <h3 class="trote-step-title">Trote solidário</h3>
+            <p class="trote-step-text">Incentivamos a doação de sangue para instituições de caridade de Niterói. Fazer o bem também é papel do universitário!</p>
+          </li>
+          <li class="trote-step" data-reveal>
+            <span class="trote-step-index" aria-hidden="true">03</span>
+            <h3 class="trote-step-title">Apadrinhamento</h3>
+            <p class="trote-step-text">Cada calouro recebe um “padrinho” ou “madrinha” veterano para ajudar com dicas de professores, matérias e a vida na UFF.</p>
+          </li>
+          <li class="trote-step" data-reveal>
+            <span class="trote-step-index" aria-hidden="true">04</span>
+            <h3 class="trote-step-title">Acolhimento</h3>
+            <p class="trote-step-text">A reunião com a coordenação para apresentação do curso, Atlética e outras entidades. Aqui rola sorteios, resultado dos trotes e muito mais!</p>
+          </li>
+        </ol>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-logo"><img src="logo-simples.png" alt="AAIC Logo"></div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p class="copyright">&copy; 2026 Associação Atlética do Instituto de Computação.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Instituto de Computação</p>
+  <!-- chrome:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <!-- TODO(identidade): trocar pela logo oficial (versão para fundo verde-escuro). -->
+          <a class="footer-wordmark" href="index.html" data-placeholder="logo-footer"><span class="footer-wordmark-mark" aria-hidden="true">▽</span>AAIC</a>
+          <p class="footer-tagline">Associação Atlética do Instituto de Computação da Universidade Federal Fluminense.</p>
+          <p class="footer-coords">22°54′S · 43°08′O</p>
         </div>
-    </footer>
-    <script src="script.js"></script>
+        <nav aria-label="Rodapé">
+          <h2 class="footer-title">Navegação</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="index.html">Início</a></li>
+            <li><a class="footer-link" href="sobre.html">Sobre</a></li>
+            <li><a class="footer-link" href="times.html">Times</a></li>
+            <li><a class="footer-link" href="campeonatos.html">Campeonatos</a></li>
+            <li><a class="footer-link" href="trotes.html">Trotes</a></li>
+            <li><a class="footer-link" href="loja.html">Loja</a></li>
+            <li><a class="footer-link" href="eventos.html">Eventos</a></li>
+            <li><a class="footer-link" href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-title">Canais</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-mail"></use></svg>E-mail</a></li>
+            <!-- TODO(conteúdo): incluir Discord (convite), LinkedIn e outras redes quando houver links oficiais. -->
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Onde estamos</h2>
+          <address class="footer-text">Instituto de Computação · UFF<br>Campus da Praia Vermelha<br>Niterói · RJ</address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> AAIC · Associação Atlética do Instituto de Computação</p>
+        <p>Universidade Federal Fluminense</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /chrome:footer -->
 </body>
 </html>

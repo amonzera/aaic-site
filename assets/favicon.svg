@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- TODO(identidade): favicon provisório (∇ + estrela). Trocar pela logo oficial. -->
+  <rect width="64" height="64" rx="14" fill="#060807"/>
+  <path d="M13 17h38L32 50Z" fill="none" stroke="#6FC5A8" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M32 22.5l1.6 3.9 3.9 1.6-3.9 1.6-1.6 3.9-1.6-3.9-3.9-1.6 3.9-1.6Z" fill="#F3F5F1"/>
+</svg>

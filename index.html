@@ -1,62 +1,277 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AAIC - UFF Niterói</title>
-    <meta name="description" content="Site oficial da Associação Atlética do Instituto de Computação - UFF Niterói.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo_fundo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AAIC UFF · Associação Atlética do Instituto de Computação</title>
+  <meta name="description" content="Atlética do Instituto de Computação da UFF, em Niterói: times, campeonatos, eventos, trotes solidários e loja de Ciência da Computação, Sistemas de Informação e IA e Ciência de Dados.">
+  <link rel="canonical" href="https://aaic.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAIC UFF">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="AAIC UFF · Associação Atlética do Instituto de Computação">
+  <meta property="og:description" content="Uma só atlética para todos os cursos do Instituto de Computação da UFF.">
+  <meta property="og:url" content="https://aaic.com.br/">
+  <!-- TODO(identidade): substituir a imagem de compartilhamento provisória quando a logo existir. -->
+  <meta property="og:image" content="https://aaic.com.br/assets/img/og.jpg">
+  <meta name="theme-color" content="#060807">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/castoro-titling-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/hanken-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20261011">
+  <script src="script.js?v=20261011" defer></script>
+  <script src="astrolabio.js?v=20261011" defer></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="nome.png" alt="AAIC UFF">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="times.html">Times</a></li>
-                <li><a href="campeonatos.html">Campeonatos</a></li>
-                <li><a href="trotes.html">Trotes</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="hamburger"><div class="bar line1"></div><div class="bar line2"></div><div class="bar line3"></div></div>
+<body class="page-inicio">
+  <!-- chrome:nav -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-nav" data-nav>
+    <nav class="nav-island" aria-label="Principal">
+      <!-- TODO(identidade): trocar a marca provisória "▽ AAIC" pela logo oficial (SVG, ~28 px de altura). -->
+      <a class="nav-brand" href="index.html" data-placeholder="logo-nav">
+        <span class="nav-brand-mark" aria-hidden="true">▽</span>
+        <span>AAIC</span>
+        <span class="sr-only">— página inicial</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-nav-toggle>
+        <span class="nav-toggle-bar nav-toggle-bar--top" aria-hidden="true"></span>
+        <span class="nav-toggle-bar nav-toggle-bar--bottom" aria-hidden="true"></span>
+      </button>
+      <div class="nav-panel" id="menu" data-nav-panel>
+        <ul class="nav-links" role="list">
+          <li class="nav-item"><a class="nav-link" href="index.html" aria-current="page">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="times.html">Times</a></li>
+          <li class="nav-item"><a class="nav-link" href="campeonatos.html">Campeonatos</a></li>
+          <li class="nav-item"><a class="nav-link" href="trotes.html">Trotes</a></li>
+          <li class="nav-item"><a class="nav-link" href="loja.html">Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-panel-meta">
+          <a class="nav-panel-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">@atleticaicuff<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="nav-panel-link" href="mailto:diretoria@aaic.com.br">diretoria@aaic.com.br</a>
         </div>
+      </div>
     </nav>
+  </header>
+  <!-- /chrome:nav -->
 
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-inner">
-            <img src="logo_fundo.png" alt="Logo AAIC" class="hero-logo">
-            <h1 class="hero-title">AAIC</h1>
-            <p class="hero-subtitle">Associação Atlética do Instituto de Computação</p>
-            <div class="hero-divider"></div>
-            <span class="hero-location"><i class="fas fa-map-marker-alt"></i> UFF Niterói</span>
-            <a href="sobre.html" class="btn hero-btn">Conheça a Atlética</a>
+  <main id="conteudo" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="label"><span class="label-mark" aria-hidden="true">▽</span> Atlética do IC · UFF Niterói</p>
+          <!-- TODO(conteúdo): tese provisória em notação lógica. A ordem ∃! … ∀ é intencional:
+               "existe uma única atlética para todo curso do IC" (∀ antes de ∃! diria "cada curso com a sua"). -->
+          <h1 class="hero-title" id="hero-title">
+            <span class="hero-formula" aria-hidden="true">
+              <span class="hero-formula-line"><span class="op">∃!</span> ATLÉTICA</span>
+              <span class="hero-formula-line"><span class="op">∀</span> CURSO <span class="op">∈</span> IC.</span>
+            </span>
+            <span class="hero-translation">Uma só atlética para todos os cursos do Instituto de Computação da UFF.</span>
+          </h1>
+          <p class="hero-lede">Ciência da Computação, Sistemas de Informação e IA e Ciência de Dados competindo, festejando e acolhendo sob o mesmo céu.</p>
+          <div class="hero-actions">
+            <a class="btn" href="sobre.html">Conheça a atlética<span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-up-right"></use></svg></span></a>
+            <a class="link-arrow" href="eventos.html">Próximos eventos<svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-right"></use></svg></a>
+          </div>
         </div>
+
+        <!-- Astrolábio vivo: gerado por astrolabio.js com o céu real sobre o IC no momento do acesso.
+             TODO(identidade): a logo oficial entra no eixo central (data-placeholder="logo-astrolabio", em astrolabio.js).
+             TODO(conteúdo): a inscrição do limbo vem de data-inscription; o trecho em hex decodifica "#hipatia". -->
+        <figure class="astrolabe" data-astrolabe data-inscription="SIC ITVR AD ASTRA · ASSOCIAÇÃO ATLÉTICA DO INSTITVTO DE COMPVTAÇÃO · VFF · NICTHEROY · MMXXVI · 23 68 69 70 61 74 69 61">
+          <div class="astro-disc" data-astro-disc>
+            <noscript><img class="astro-fallback" src="assets/img/astrolabio.svg" alt="" width="640" height="640"></noscript>
+          </div>
+          <figcaption class="astro-caption"><span class="astro-caption-mark" aria-hidden="true">◇</span> <span data-astro-readout>Céu sobre o IC · 22°54′S 43°08′O</span></figcaption>
+        </figure>
+      </div>
     </section>
 
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-logo">
-                <!-- <img src="logo-simples.png" alt="AAIC Logo"> -->
-            </div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/atleticaicuff/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p class="copyright">&copy; 2026 Associação Atlética do Instituto de Computação.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Instituto de Computação UFF</p>
+    <section class="section section--light" aria-labelledby="manifesto-title">
+      <div class="container manifesto-grid">
+        <div class="manifesto-head">
+          <p class="label"><span class="label-mark" aria-hidden="true">◇</span> Desde 2026</p>
         </div>
-    </footer>
-    <script src="script.js"></script>
+        <h2 class="manifesto-title" id="manifesto-title">Diferentes origens. <span class="manifesto-title-line">Um só propósito.</span></h2>
+        <ul class="course-set" role="list" aria-label="Os três cursos da AAIC">
+          <li class="course-set-item">Ciência da Computação</li>
+          <li class="course-set-item">Sistemas de Informação</li>
+          <li class="course-set-item">IA e Ciência de Dados</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="indice-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="label"><span class="label-mark" aria-hidden="true">◇</span> Índice</p>
+          <h2 class="section-title" id="indice-title">Tudo o que acontece no IC</h2>
+          <p class="section-lede">Times, campeonatos, festas, trotes e a lojinha da atlética. Escolha por onde começar.</p>
+        </div>
+
+        <div class="index-grid">
+          <div class="index-item index-item--champ" data-reveal>
+            <a class="card index-card" href="campeonatos.html">
+              <div class="card-core index-card-core index-card-core--media">
+                <div class="index-card-media duotone">
+                  <img class="index-card-img duotone-img" src="assets/img/lleague-1200.webp" srcset="assets/img/lleague-640.webp 640w, assets/img/lleague-1200.webp 1080w" sizes="(min-width: 64rem) 56vw, 100vw" width="1080" height="1080" alt="" loading="lazy" decoding="async">
+                </div>
+                <div class="index-card-body">
+                  <span class="chip chip--live">Inscrições abertas</span>
+                  <h3 class="index-card-title">Campeonatos</h3>
+                  <p class="index-card-text">Campeonato Interno de E-Sports, disputado a cada semestre.</p>
+                  <span class="index-card-cta">Ver campeonatos<svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-right"></use></svg></span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="index-item index-item--events" data-reveal>
+            <a class="card index-card" href="eventos.html">
+              <div class="card-core index-card-core index-card-core--media">
+                <div class="index-card-media duotone">
+                  <img class="index-card-img duotone-img" src="assets/img/isoporzinho-640.webp" srcset="assets/img/isoporzinho-640.webp 640w, assets/img/isoporzinho-1200.webp 1200w" sizes="(min-width: 64rem) 40vw, 100vw" width="1200" height="1200" alt="" loading="lazy" decoding="async">
+                </div>
+                <div class="index-card-body">
+                  <h3 class="index-card-title">Eventos</h3>
+                  <p class="index-card-text">Isoporzinho na Cantareira, churrasco da atlética e as festas do semestre.</p>
+                  <span class="index-card-cta">Ver eventos<svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-right"></use></svg></span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="index-item index-item--teams" data-reveal>
+            <a class="card index-card" href="times.html">
+              <div class="card-core index-card-core">
+                <div class="index-picto" aria-hidden="true">
+                  <svg class="icon"><use href="assets/icons.svg?v=20261011#p-futsal"></use></svg>
+                  <svg class="icon"><use href="assets/icons.svg?v=20261011#p-basquete"></use></svg>
+                  <svg class="icon"><use href="assets/icons.svg?v=20261011#p-volei"></use></svg>
+                  <svg class="icon"><use href="assets/icons.svg?v=20261011#p-handebol"></use></svg>
+                  <svg class="icon"><use href="assets/icons.svg?v=20261011#p-esports"></use></svg>
+                  <svg class="icon"><use href="assets/icons.svg?v=20261011#p-cheer"></use></svg>
+                </div>
+                <div class="index-card-body">
+                  <h3 class="index-card-title">Times</h3>
+                  <p class="index-card-text">Seis modalidades: futsal, basquete, vôlei, handebol, e-sports e cheerleading.</p>
+                  <span class="index-card-cta">Ver times<svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-right"></use></svg></span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="index-item index-item--trotes" data-reveal>
+            <a class="card index-card" href="trotes.html">
+              <div class="card-core index-card-core">
+                <div class="index-card-body">
+                  <h3 class="index-card-title">Trotes</h3>
+                  <p class="index-card-text">Acolhimento sem violência: o calouro já entra fazendo parte da família.</p>
+                </div>
+                <span class="index-card-cta">Ver as etapas<svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-right"></use></svg></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="index-item index-item--store" data-reveal>
+            <a class="card index-card" href="loja.html">
+              <div class="card-core index-card-core">
+                <div class="index-card-body">
+                  <span class="chip">Em breve</span>
+                  <h3 class="index-card-title">Loja</h3>
+                  <p class="index-card-text">Camiseta, caneca com tirante, bottons e o uniforme da atlética.</p>
+                </div>
+                <span class="index-card-cta">Ver produtos<svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-right"></use></svg></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="index-item index-item--contact" data-reveal>
+            <a class="card index-card" href="contato.html">
+              <div class="card-core index-card-core">
+                <div class="index-card-body">
+                  <h3 class="index-card-title">Contato</h3>
+                  <p class="index-card-text">Quer entrar para um time ou propor uma parceria? Fale com a diretoria.</p>
+                </div>
+                <span class="index-card-cta">Falar com a diretoria<svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-right"></use></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--green hipatia-teaser" id="hipatia" aria-labelledby="hipatia-title">
+      <div class="container hipatia-grid">
+        <figure class="card hipatia-figure" data-reveal>
+          <!-- TODO(identidade): ilustração ou foto da mascote Hipátia (PNG ou WebP com fundo transparente, 1200×1500). -->
+          <div class="card-core">
+            <div class="placeholder" data-placeholder="mascote-home">
+              <span class="placeholder-label"><span class="placeholder-title">Mascote · Hipátia</span>PNG ou WebP transparente · 1200×1500</span>
+            </div>
+          </div>
+        </figure>
+        <div class="hipatia-copy">
+          <p class="label"><span class="label-mark" aria-hidden="true">◇</span> Mascote</p>
+          <h2 class="section-title" id="hipatia-title">Por que Hipátia?</h2>
+          <!-- TODO(conteúdo): texto provisório; revisar com a diretoria. -->
+          <p class="hipatia-text hipatia-text--lead">Matemática, astrônoma e filósofa de Alexandria, Hipátia ensinava geometria e astronomia. Segundo as cartas de seu aluno Sinésio, ela orientou a construção de um astrolábio como o que abre esta página.</p>
+          <p class="hipatia-text">Uma das atléticas que formaram a AAIC levava o nome de Ada Lovelace. De Ada a Hipátia, seguimos com mulheres que fizeram a matemática avançar.</p>
+          <a class="link-arrow" href="sobre.html#hipatia">Ler a história completa<svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-right"></use></svg></a>
+          <!-- Easter egg: só aparece em aaic.com.br/#hipatia (o hex do limbo do astrolábio).
+               TODO(conteúdo): definir se há recompensa para quem chegar aqui. -->
+          <p class="egg">∴ Você decifrou a inscrição do astrolábio. Hipátia aprovaria.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- chrome:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <!-- TODO(identidade): trocar pela logo oficial (versão para fundo verde-escuro). -->
+          <a class="footer-wordmark" href="index.html" data-placeholder="logo-footer"><span class="footer-wordmark-mark" aria-hidden="true">▽</span>AAIC</a>
+          <p class="footer-tagline">Associação Atlética do Instituto de Computação da Universidade Federal Fluminense.</p>
+          <p class="footer-coords">22°54′S · 43°08′O</p>
+        </div>
+        <nav aria-label="Rodapé">
+          <h2 class="footer-title">Navegação</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="index.html">Início</a></li>
+            <li><a class="footer-link" href="sobre.html">Sobre</a></li>
+            <li><a class="footer-link" href="times.html">Times</a></li>
+            <li><a class="footer-link" href="campeonatos.html">Campeonatos</a></li>
+            <li><a class="footer-link" href="trotes.html">Trotes</a></li>
+            <li><a class="footer-link" href="loja.html">Loja</a></li>
+            <li><a class="footer-link" href="eventos.html">Eventos</a></li>
+            <li><a class="footer-link" href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-title">Canais</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-mail"></use></svg>E-mail</a></li>
+            <!-- TODO(conteúdo): incluir Discord (convite), LinkedIn e outras redes quando houver links oficiais. -->
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Onde estamos</h2>
+          <address class="footer-text">Instituto de Computação · UFF<br>Campus da Praia Vermelha<br>Niterói · RJ</address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> AAIC · Associação Atlética do Instituto de Computação</p>
+        <p>Universidade Federal Fluminense</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /chrome:footer -->
 </body>
 </html>

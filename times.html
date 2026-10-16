@@ -1,100 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Times - AAIC UFF Niterói</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo_fundo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Times · AAIC UFF</title>
+  <meta name="description" content="Futsal, basquete, vôlei, handebol, e-sports e cheerleading: as seis modalidades da Atlética do Instituto de Computação da UFF.">
+  <link rel="canonical" href="https://aaic.com.br/times.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAIC UFF">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Times · AAIC UFF">
+  <meta property="og:description" content="Futsal, basquete, vôlei, handebol, e-sports e cheerleading: as seis modalidades da Atlética do Instituto de Computação da UFF.">
+  <meta property="og:url" content="https://aaic.com.br/times.html">
+  <!-- TODO(identidade): substituir a imagem de compartilhamento provisória quando a logo existir. -->
+  <meta property="og:image" content="https://aaic.com.br/assets/img/og.jpg">
+  <meta name="theme-color" content="#060807">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/castoro-titling-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/hanken-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20261011">
+  <script src="script.js?v=20261011" defer></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo"><img src="nome.png" alt="AAIC UFF"></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="times.html">Times</a></li>
-                <li><a href="campeonatos.html">Campeonatos</a></li>
-                <li><a href="trotes.html">Trotes</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="hamburger"><div class="bar line1"></div><div class="bar line2"></div><div class="bar line3"></div></div>
+<body class="page-times">
+  <!-- chrome:nav -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-nav" data-nav>
+    <nav class="nav-island" aria-label="Principal">
+      <!-- TODO(identidade): trocar a marca provisória "▽ AAIC" pela logo oficial (SVG, ~28 px de altura). -->
+      <a class="nav-brand" href="index.html" data-placeholder="logo-nav">
+        <span class="nav-brand-mark" aria-hidden="true">▽</span>
+        <span>AAIC</span>
+        <span class="sr-only">— página inicial</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-nav-toggle>
+        <span class="nav-toggle-bar nav-toggle-bar--top" aria-hidden="true"></span>
+        <span class="nav-toggle-bar nav-toggle-bar--bottom" aria-hidden="true"></span>
+      </button>
+      <div class="nav-panel" id="menu" data-nav-panel>
+        <ul class="nav-links" role="list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="times.html" aria-current="page">Times</a></li>
+          <li class="nav-item"><a class="nav-link" href="campeonatos.html">Campeonatos</a></li>
+          <li class="nav-item"><a class="nav-link" href="trotes.html">Trotes</a></li>
+          <li class="nav-item"><a class="nav-link" href="loja.html">Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-panel-meta">
+          <a class="nav-panel-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">@atleticaicuff<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="nav-panel-link" href="mailto:diretoria@aaic.com.br">diretoria@aaic.com.br</a>
         </div>
+      </div>
     </nav>
+  </header>
+  <!-- /chrome:nav -->
 
+  <main id="conteudo" tabindex="-1">
     <header class="page-header">
-        <div class="container">
-            <h1>Nossos Times</h1>
-            <p>Representando com garra e determinação.</p>
-        </div>
+      <div class="container page-header-inner">
+        <p class="label"><a class="label-link" href="index.html">AAIC</a> <span aria-hidden="true">/</span> Times</p>
+        <h1 class="page-title">Nossos times</h1>
+        <p class="page-lede">Representando com garra e determinação.</p>
+      </div>
     </header>
 
-    <section class="section teams">
-        <div class="container">
-            <div class="teams-grid">
-                <div class="team-card">
-                    <div class="team-image"><img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Futsal" alt="Futsal"></div>
-                    <div class="team-info">
-                        <h3>Futsal (Masc/Fem)</h3>
-                        <p>Em breve.</p>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="team-image"><img src="https://via.placeholder.com/400x300/7A0019/FFFFFF?text=Basquete" alt="Basquete"></div>
-                    <div class="team-info">
-                        <h3>Basquete</h3>
-                        <p>Em breve.</p>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="team-image"><img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=Volei" alt="Volei"></div>
-                    <div class="team-info">
-                        <h3>Vôlei</h3>
-                        <p>Em breve.</p>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="team-image"><img src="https://via.placeholder.com/400x300/7A0019/FFFFFF?text=Handebol" alt="Handebol"></div>
-                    <div class="team-info">
-                        <h3>Handebol</h3>
-                        <p>Em breve.</p>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="team-image"><img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=E-Sports" alt="E-Sports"></div>
-                    <div class="team-info">
-                        <h3>E-Sports</h3>
-                        <p>Em breve.</p>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="team-image"><img src="https://via.placeholder.com/400x300/7A0019/FFFFFF?text=Cheerleading" alt="Cheerleading"></div>
-                    <div class="team-info">
-                        <h3>Cheerleading</h3>
-                        <p>Em breve.</p>
-                    </div>
-                </div>
-            </div>
+    <section class="section" aria-labelledby="modalidades-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="label" id="modalidades-title"><span class="label-mark" aria-hidden="true">◇</span> Seis modalidades</h2>
         </div>
+        <ul class="team-list" role="list">
+          <li class="team-row" data-reveal>
+            <svg class="team-picto" aria-hidden="true"><use href="assets/icons.svg?v=20261011#p-futsal"></use></svg>
+            <div class="team-head">
+              <h3 class="team-name">Futsal</h3>
+              <p class="team-meta">Masculino e feminino</p>
+            </div>
+            <span class="chip team-status">Em breve</span>
+            <!-- TODO(identidade): foto do time de futsal (1600×1200). -->
+            <div class="placeholder placeholder--landscape placeholder--compact team-photo" data-placeholder="time-futsal"><span class="placeholder-label">Foto do time</span></div>
+          </li>
+          <li class="team-row" data-reveal>
+            <svg class="team-picto" aria-hidden="true"><use href="assets/icons.svg?v=20261011#p-basquete"></use></svg>
+            <div class="team-head">
+              <h3 class="team-name">Basquete</h3>
+            </div>
+            <span class="chip team-status">Em breve</span>
+            <!-- TODO(identidade): foto do time de basquete (1600×1200). -->
+            <div class="placeholder placeholder--landscape placeholder--compact team-photo" data-placeholder="time-basquete"><span class="placeholder-label">Foto do time</span></div>
+          </li>
+          <li class="team-row" data-reveal>
+            <svg class="team-picto" aria-hidden="true"><use href="assets/icons.svg?v=20261011#p-volei"></use></svg>
+            <div class="team-head">
+              <h3 class="team-name">Vôlei</h3>
+            </div>
+            <span class="chip team-status">Em breve</span>
+            <!-- TODO(identidade): foto do time de vôlei (1600×1200). -->
+            <div class="placeholder placeholder--landscape placeholder--compact team-photo" data-placeholder="time-volei"><span class="placeholder-label">Foto do time</span></div>
+          </li>
+          <li class="team-row" data-reveal>
+            <svg class="team-picto" aria-hidden="true"><use href="assets/icons.svg?v=20261011#p-handebol"></use></svg>
+            <div class="team-head">
+              <h3 class="team-name">Handebol</h3>
+            </div>
+            <span class="chip team-status">Em breve</span>
+            <!-- TODO(identidade): foto do time de handebol (1600×1200). -->
+            <div class="placeholder placeholder--landscape placeholder--compact team-photo" data-placeholder="time-handebol"><span class="placeholder-label">Foto do time</span></div>
+          </li>
+          <li class="team-row" data-reveal>
+            <svg class="team-picto" aria-hidden="true"><use href="assets/icons.svg?v=20261011#p-esports"></use></svg>
+            <div class="team-head">
+              <h3 class="team-name">E-sports</h3>
+            </div>
+            <span class="chip team-status">Em breve</span>
+            <!-- TODO(identidade): foto do time de e-sports (1600×1200). -->
+            <div class="placeholder placeholder--landscape placeholder--compact team-photo" data-placeholder="time-esports"><span class="placeholder-label">Foto do time</span></div>
+          </li>
+          <li class="team-row" data-reveal>
+            <svg class="team-picto" aria-hidden="true"><use href="assets/icons.svg?v=20261011#p-cheer"></use></svg>
+            <div class="team-head">
+              <h3 class="team-name">Cheerleading</h3>
+            </div>
+            <span class="chip team-status">Em breve</span>
+            <!-- TODO(identidade): foto do time de cheerleading (1600×1200). -->
+            <div class="placeholder placeholder--landscape placeholder--compact team-photo" data-placeholder="time-cheer"><span class="placeholder-label">Foto do time</span></div>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-logo"><img src="logo-simples.png" alt="AAIC Logo"></div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p class="copyright">&copy; 2026 Associação Atlética do Instituto de Computação.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Instituto de Computação</p>
+    <section class="section section--green" aria-labelledby="jogar-title">
+      <div class="container cta-band-inner">
+        <h2 class="cta-band-title" id="jogar-title">Quer jogar? Fale com a diretoria.</h2>
+        <a class="btn" href="contato.html">Entrar em contato<span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-up-right"></use></svg></span></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- chrome:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <!-- TODO(identidade): trocar pela logo oficial (versão para fundo verde-escuro). -->
+          <a class="footer-wordmark" href="index.html" data-placeholder="logo-footer"><span class="footer-wordmark-mark" aria-hidden="true">▽</span>AAIC</a>
+          <p class="footer-tagline">Associação Atlética do Instituto de Computação da Universidade Federal Fluminense.</p>
+          <p class="footer-coords">22°54′S · 43°08′O</p>
         </div>
-    </footer>
-    <script src="script.js"></script>
+        <nav aria-label="Rodapé">
+          <h2 class="footer-title">Navegação</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="index.html">Início</a></li>
+            <li><a class="footer-link" href="sobre.html">Sobre</a></li>
+            <li><a class="footer-link" href="times.html">Times</a></li>
+            <li><a class="footer-link" href="campeonatos.html">Campeonatos</a></li>
+            <li><a class="footer-link" href="trotes.html">Trotes</a></li>
+            <li><a class="footer-link" href="loja.html">Loja</a></li>
+            <li><a class="footer-link" href="eventos.html">Eventos</a></li>
+            <li><a class="footer-link" href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-title">Canais</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-mail"></use></svg>E-mail</a></li>
+            <!-- TODO(conteúdo): incluir Discord (convite), LinkedIn e outras redes quando houver links oficiais. -->
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Onde estamos</h2>
+          <address class="footer-text">Instituto de Computação · UFF<br>Campus da Praia Vermelha<br>Niterói · RJ</address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> AAIC · Associação Atlética do Instituto de Computação</p>
+        <p>Universidade Federal Fluminense</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /chrome:footer -->
 </body>
 </html>

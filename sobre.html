@@ -1,92 +1,176 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - AAIC UFF Niterói</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo_fundo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre · AAIC UFF</title>
+  <meta name="description" content="A história da AAIC: duas atléticas do Instituto de Computação da UFF que viraram uma só, a nossa missão e por que a mascote é Hipátia de Alexandria.">
+  <link rel="canonical" href="https://aaic.com.br/sobre.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAIC UFF">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Sobre · AAIC UFF">
+  <meta property="og:description" content="A história da AAIC: duas atléticas do Instituto de Computação da UFF que viraram uma só, a nossa missão e por que a mascote é Hipátia de Alexandria.">
+  <meta property="og:url" content="https://aaic.com.br/sobre.html">
+  <!-- TODO(identidade): substituir a imagem de compartilhamento provisória quando a logo existir. -->
+  <meta property="og:image" content="https://aaic.com.br/assets/img/og.jpg">
+  <meta name="theme-color" content="#060807">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/castoro-titling-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/hanken-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20261011">
+  <script src="script.js?v=20261011" defer></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo"><img src="nome.png" alt="AAIC UFF"></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="times.html">Times</a></li>
-                <li><a href="campeonatos.html">Campeonatos</a></li>
-                <li><a href="trotes.html">Trotes</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="hamburger"><div class="bar line1"></div><div class="bar line2"></div><div class="bar line3"></div></div>
+<body class="page-sobre">
+  <!-- chrome:nav -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-nav" data-nav>
+    <nav class="nav-island" aria-label="Principal">
+      <!-- TODO(identidade): trocar a marca provisória "▽ AAIC" pela logo oficial (SVG, ~28 px de altura). -->
+      <a class="nav-brand" href="index.html" data-placeholder="logo-nav">
+        <span class="nav-brand-mark" aria-hidden="true">▽</span>
+        <span>AAIC</span>
+        <span class="sr-only">— página inicial</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-nav-toggle>
+        <span class="nav-toggle-bar nav-toggle-bar--top" aria-hidden="true"></span>
+        <span class="nav-toggle-bar nav-toggle-bar--bottom" aria-hidden="true"></span>
+      </button>
+      <div class="nav-panel" id="menu" data-nav-panel>
+        <ul class="nav-links" role="list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html" aria-current="page">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="times.html">Times</a></li>
+          <li class="nav-item"><a class="nav-link" href="campeonatos.html">Campeonatos</a></li>
+          <li class="nav-item"><a class="nav-link" href="trotes.html">Trotes</a></li>
+          <li class="nav-item"><a class="nav-link" href="loja.html">Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-panel-meta">
+          <a class="nav-panel-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">@atleticaicuff<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="nav-panel-link" href="mailto:diretoria@aaic.com.br">diretoria@aaic.com.br</a>
         </div>
+      </div>
     </nav>
+  </header>
+  <!-- /chrome:nav -->
 
+  <main id="conteudo" tabindex="-1">
     <header class="page-header">
-        <div class="container">
-            <h1>Sobre a AAIC</h1>
-            <p>Associação Atlética do Instituto de Computação</p>
-        </div>
+      <div class="container page-header-inner">
+        <p class="label"><a class="label-link" href="index.html">AAIC</a> <span aria-hidden="true">/</span> Sobre</p>
+        <h1 class="page-title">Sobre a AAIC</h1>
+        <p class="page-lede">Associação Atlética do Instituto de Computação da UFF: três cursos, uma só identidade.</p>
+      </div>
     </header>
 
-    <section class="section about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Nossa História</h3>
-                    <p>Há muitos anos, surgia a Associação Atlética Acadêmica Ada Lovelace e a Associação Atlética de Sistemas de Informação. Dividíamos o mesmo prédio e a mesma paixão. Mas éramos separados, cada um com sua própria identidade, suas próprias tradições e seus próprios desafios.</p>
-<p></p>                    
-Com o passar do tempo, foi percebido que, apesar das diferenças, juntos eles eram mais fortes. A rivalidade sempre convergiu para proporcionar momentos incríveis que não teriam conseguido sozinhos.
-<p></p>     
-E então, em um momento de união e visão de futuro, nasceu a ideia de juntar forças. Não para apagar o passado, mas para construir um futuro ainda mais brilhante.
-<p></p>     
-Em vez de continuar separados, escolhemos evoluir.    
-Três cursos deixaram de ser partes isoladas
-para formar uma só identidade.
-<p></p>     
-Assim, em 2026, surgem as <strong>Hidras da UFF</strong> trazendo o nome da <strong>AAIC UFF</strong>.
-<p></p>     
-Inspirados na ideia de crescer mesmo diante dos desafios,
-transformamos diversidade em força.
-<p></p>     
-Ciência da Computação.
-Sistemas de Informação.
-IA e Ciência de Dados.
-<p></p>     
-Diferentes origens.
-Um só propósito.
-<p></p>     
-E uma história que ainda está sendo escrita, por todos que fazem parte dela.</p>
-                    
-                    <h3>Missão</h3>
-                    <p>Formar a atlética mais forte e unida da UFF,
-desenvolvendo pessoas dentro e fora das quadras (e cantareiras),
-e criando uma comunidade que cresce junto, compete junto e se representa com orgulho.</p>
-                </div>
-                <div class="about-image">
-                    <img src="logo_fundo.png" alt="Logo AAIC UFF" style="border-radius: 50%; max-width: 80%; margin: 0 auto;">
-                </div>
-            </div>
+    <section class="section section--light" aria-labelledby="historia-title">
+      <div class="container manuscript">
+        <div class="manuscript-head">
+          <p class="label"><span class="label-mark" aria-hidden="true">◇</span> Nossa história</p>
+          <h2 class="section-title" id="historia-title">De duas atléticas, uma só</h2>
         </div>
+        <div class="manuscript-body">
+          <p class="manuscript-note">Antes de 2026 · duas atléticas</p>
+          <p class="manuscript-lead">Há muitos anos, surgia a Associação Atlética Acadêmica Ada Lovelace e a Associação Atlética de Sistemas de Informação. Dividíamos o mesmo prédio e a mesma paixão. Mas éramos separados, cada um com sua própria identidade, suas próprias tradições e seus próprios desafios.</p>
+          <p>Com o passar do tempo, foi percebido que, apesar das diferenças, juntos eles eram mais fortes. A rivalidade sempre convergiu para proporcionar momentos incríveis que não teriam conseguido sozinhos.</p>
+          <p>E então, em um momento de união e visão de futuro, nasceu a ideia de juntar forças. Não para apagar o passado, mas para construir um futuro ainda mais brilhante.</p>
+          <p class="manuscript-pull">Em vez de continuar separados, escolhemos evoluir.</p>
+          <p>Três cursos deixaram de ser partes isoladas para formar uma só identidade.</p>
+          <p class="manuscript-note">2026 · nasce a AAIC</p>
+          <p>Assim, em 2026, nasce a AAIC UFF. Inspirados na ideia de crescer mesmo diante dos desafios, transformamos diversidade em força.</p>
+          <ul class="course-set" role="list" aria-label="Os três cursos da AAIC">
+          <li class="course-set-item">Ciência da Computação</li>
+          <li class="course-set-item">Sistemas de Informação</li>
+          <li class="course-set-item">IA e Ciência de Dados</li>
+        </ul>
+          <p class="manuscript-pull">Diferentes origens. Um só propósito.</p>
+          <p>E uma história que ainda está sendo escrita, por todos que fazem parte dela.</p>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-logo"><img src="logo-simples.png" alt="AAIC Logo"></div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p class="copyright">&copy; 2026 Associação Atlética do Instituto de Computação.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Instituto de Computação</p>
+    <section class="section" aria-labelledby="missao-title">
+      <div class="container mission-grid">
+        <figure class="card mission-figure" data-reveal>
+          <div class="card-core duotone mission-photo">
+            <img class="duotone-img" src="assets/img/ic-1200.webp" srcset="assets/img/ic-640.webp 640w, assets/img/ic-1200.webp 1200w" sizes="(min-width: 64rem) 42vw, 100vw" width="1200" height="721" alt="Prédio do Instituto de Computação da UFF, com passarelas de treliça metálica ligando os blocos." loading="lazy" decoding="async">
+          </div>
+          <figcaption class="figure-caption">Nossa casa: o Instituto de Computação, no campus da Praia Vermelha, em Niterói.</figcaption>
+        </figure>
+        <div class="mission-copy">
+          <h2 class="label" id="missao-title"><span class="label-mark" aria-hidden="true">◇</span> Missão</h2>
+          <p class="mission-quote">Formar a atlética <strong>mais forte e unida da UFF</strong>, desenvolvendo pessoas dentro e fora das quadras (e cantareiras), e criando uma comunidade que cresce junto, compete junto e se representa com orgulho.</p>
         </div>
-    </footer>
-    <script src="script.js"></script>
+      </div>
+    </section>
+
+    <section class="section section--green" id="hipatia" aria-labelledby="hipatia-title">
+      <div class="container hipatia-grid">
+        <figure class="card hipatia-figure" data-reveal>
+          <!-- TODO(identidade): ilustração principal da mascote Hipátia (PNG ou WebP com fundo transparente, 1200×1500). -->
+          <div class="card-core">
+            <div class="placeholder" data-placeholder="mascote-sobre">
+              <span class="placeholder-label"><span class="placeholder-title">Mascote · Hipátia</span>Ilustração principal · PNG ou WebP transparente · 1200×1500</span>
+            </div>
+          </div>
+        </figure>
+        <div class="hipatia-copy">
+          <p class="label"><span class="label-mark" aria-hidden="true">◇</span> Mascote</p>
+          <h2 class="section-title" id="hipatia-title">Por que Hipátia?</h2>
+          <!-- TODO(conteúdo): texto provisório; revisar com a diretoria antes de publicar. -->
+          <p class="hipatia-text hipatia-text--lead">Hipátia de Alexandria foi matemática, astrônoma e filósofa. Nascida entre 350 e 370 d.C., ensinou geometria e astronomia em Alexandria e se tornou uma das mentes mais respeitadas do seu tempo, até sua morte, em 415.</p>
+          <p class="hipatia-text">Atribuem-se a ela comentários sobre a Aritmética de Diofanto, as Cônicas de Apolônio e as tabelas astronômicas de Ptolomeu. Em suas cartas, o aluno Sinésio descreve um astrolábio construído com o que aprendeu com ela: o mesmo instrumento que abre este site.</p>
+          <p class="hipatia-text">Uma das atléticas que formaram a AAIC levava o nome de Ada Lovelace. De Ada a Hipátia, seguimos com mulheres que fizeram a matemática avançar: ciência, curiosidade e coragem.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- chrome:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <!-- TODO(identidade): trocar pela logo oficial (versão para fundo verde-escuro). -->
+          <a class="footer-wordmark" href="index.html" data-placeholder="logo-footer"><span class="footer-wordmark-mark" aria-hidden="true">▽</span>AAIC</a>
+          <p class="footer-tagline">Associação Atlética do Instituto de Computação da Universidade Federal Fluminense.</p>
+          <p class="footer-coords">22°54′S · 43°08′O</p>
+        </div>
+        <nav aria-label="Rodapé">
+          <h2 class="footer-title">Navegação</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="index.html">Início</a></li>
+            <li><a class="footer-link" href="sobre.html">Sobre</a></li>
+            <li><a class="footer-link" href="times.html">Times</a></li>
+            <li><a class="footer-link" href="campeonatos.html">Campeonatos</a></li>
+            <li><a class="footer-link" href="trotes.html">Trotes</a></li>
+            <li><a class="footer-link" href="loja.html">Loja</a></li>
+            <li><a class="footer-link" href="eventos.html">Eventos</a></li>
+            <li><a class="footer-link" href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-title">Canais</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-mail"></use></svg>E-mail</a></li>
+            <!-- TODO(conteúdo): incluir Discord (convite), LinkedIn e outras redes quando houver links oficiais. -->
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Onde estamos</h2>
+          <address class="footer-text">Instituto de Computação · UFF<br>Campus da Praia Vermelha<br>Niterói · RJ</address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> AAIC · Associação Atlética do Instituto de Computação</p>
+        <p>Universidade Federal Fluminense</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /chrome:footer -->
 </body>
 </html>

@@ -1,90 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja - AAIC UFF Niterói</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo_fundo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja · AAIC UFF</title>
+  <meta name="description" content="Camiseta, caneca com tirante, bottons e uniforme da Atlética do Instituto de Computação da UFF. Em breve.">
+  <link rel="canonical" href="https://aaic.com.br/loja.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAIC UFF">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Loja · AAIC UFF">
+  <meta property="og:description" content="Camiseta, caneca com tirante, bottons e uniforme da Atlética do Instituto de Computação da UFF. Em breve.">
+  <meta property="og:url" content="https://aaic.com.br/loja.html">
+  <!-- TODO(identidade): substituir a imagem de compartilhamento provisória quando a logo existir. -->
+  <meta property="og:image" content="https://aaic.com.br/assets/img/og.jpg">
+  <meta name="theme-color" content="#060807">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/castoro-titling-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/hanken-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20261011">
+  <script src="script.js?v=20261011" defer></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo"><img src="nome.png" alt="AAIC UFF"></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="times.html">Times</a></li>
-                <li><a href="campeonatos.html">Campeonatos</a></li>
-                <li><a href="trotes.html">Trotes</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="hamburger"><div class="bar line1"></div><div class="bar line2"></div><div class="bar line3"></div></div>
+<body class="page-loja">
+  <!-- chrome:nav -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-nav" data-nav>
+    <nav class="nav-island" aria-label="Principal">
+      <!-- TODO(identidade): trocar a marca provisória "▽ AAIC" pela logo oficial (SVG, ~28 px de altura). -->
+      <a class="nav-brand" href="index.html" data-placeholder="logo-nav">
+        <span class="nav-brand-mark" aria-hidden="true">▽</span>
+        <span>AAIC</span>
+        <span class="sr-only">— página inicial</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-nav-toggle>
+        <span class="nav-toggle-bar nav-toggle-bar--top" aria-hidden="true"></span>
+        <span class="nav-toggle-bar nav-toggle-bar--bottom" aria-hidden="true"></span>
+      </button>
+      <div class="nav-panel" id="menu" data-nav-panel>
+        <ul class="nav-links" role="list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="times.html">Times</a></li>
+          <li class="nav-item"><a class="nav-link" href="campeonatos.html">Campeonatos</a></li>
+          <li class="nav-item"><a class="nav-link" href="trotes.html">Trotes</a></li>
+          <li class="nav-item"><a class="nav-link" href="loja.html" aria-current="page">Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav-panel-meta">
+          <a class="nav-panel-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">@atleticaicuff<span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="nav-panel-link" href="mailto:diretoria@aaic.com.br">diretoria@aaic.com.br</a>
         </div>
+      </div>
     </nav>
+  </header>
+  <!-- /chrome:nav -->
 
+  <main id="conteudo" tabindex="-1">
     <header class="page-header">
-        <div class="container">
-            <h1>Loja da AAIC</h1>
-            <p>Vista as cores que vibram.</p>
-        </div>
+      <div class="container page-header-inner">
+        <p class="label"><a class="label-link" href="index.html">AAIC</a> <span aria-hidden="true">/</span> Loja</p>
+        <h1 class="page-title">Loja da AAIC</h1>
+        <p class="page-lede">Vista as cores que vibram.</p>
+      </div>
     </header>
 
-    <section class="section store">
-        <div class="container">
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-image"><img src="https://via.placeholder.com/300x300/111827/7A0019?text=EM+BREVE" alt="Produto em breve"></div>
-                    <div class="product-info">
-                        <h3>Camiseta do Curso</h3>
-                        <span class="product-price">Em breve</span>
-                        <button class="btn" disabled>Em breve</button>
-                    </div>
+    <section class="section" aria-labelledby="produtos-title">
+      <div class="container">
+        <h2 class="sr-only" id="produtos-title">Produtos</h2>
+        <ul class="product-grid" role="list">
+          <li data-reveal>
+            <article class="card product-card">
+              <div class="card-core">
+                <!-- TODO(identidade): foto do produto "Camiseta do curso" (1200×1200, fundo neutro). -->
+                <div class="placeholder placeholder--square" data-placeholder="produto-camiseta">
+                  <span class="placeholder-label"><span class="placeholder-title">Foto do produto</span>1200×1200 · fundo neutro</span>
                 </div>
-                <div class="product-card">
-                    <div class="product-image"><img src="https://via.placeholder.com/300x300/111827/7A0019?text=EM+BREVE" alt="Produto em breve"></div>
-                    <div class="product-info">
-                        <h3>Caneca + Tirante</h3>
-                        <span class="product-price">Em breve</span>
-                        <button class="btn" disabled>Em breve</button>
-                    </div>
+                <div class="product-card-body">
+                  <h3 class="product-card-title">Camiseta do curso</h3>
+                  <span class="chip">Em breve</span>
                 </div>
-                <div class="product-card">
-                    <div class="product-image"><img src="https://via.placeholder.com/300x300/111827/7A0019?text=EM+BREVE" alt="Produto em breve"></div>
-                    <div class="product-info">
-                        <h3>Bottons</h3>
-                        <span class="product-price">Em breve</span>
-                        <button class="btn" disabled>Em breve</button>
-                    </div>
+              </div>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card product-card">
+              <div class="card-core">
+                <!-- TODO(identidade): foto do produto "Caneca + tirante" (1200×1200, fundo neutro). -->
+                <div class="placeholder placeholder--square" data-placeholder="produto-caneca">
+                  <span class="placeholder-label"><span class="placeholder-title">Foto do produto</span>1200×1200 · fundo neutro</span>
                 </div>
-                <div class="product-card">
-                    <div class="product-image"><img src="https://via.placeholder.com/300x300/111827/7A0019?text=EM+BREVE" alt="Produto em breve"></div>
-                    <div class="product-info">
-                        <h3>Uniforme Atlética</h3>
-                        <span class="product-price">Em breve</span>
-                        <button class="btn" disabled>Em breve</button>
-                    </div>
+                <div class="product-card-body">
+                  <h3 class="product-card-title">Caneca + tirante</h3>
+                  <span class="chip">Em breve</span>
                 </div>
-            </div>
-        </div>
-    </section>
+              </div>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card product-card">
+              <div class="card-core">
+                <!-- TODO(identidade): foto do produto "Bottons" (1200×1200, fundo neutro). -->
+                <div class="placeholder placeholder--square" data-placeholder="produto-bottons">
+                  <span class="placeholder-label"><span class="placeholder-title">Foto do produto</span>1200×1200 · fundo neutro</span>
+                </div>
+                <div class="product-card-body">
+                  <h3 class="product-card-title">Bottons</h3>
+                  <span class="chip">Em breve</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card product-card">
+              <div class="card-core">
+                <!-- TODO(identidade): foto do produto "Uniforme da atlética" (1200×1200, fundo neutro). -->
+                <div class="placeholder placeholder--square" data-placeholder="produto-uniforme">
+                  <span class="placeholder-label"><span class="placeholder-title">Foto do produto</span>1200×1200 · fundo neutro</span>
+                </div>
+                <div class="product-card-body">
+                  <h3 class="product-card-title">Uniforme da atlética</h3>
+                  <span class="chip">Em breve</span>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
 
-    <footer>
-        <div class="container">
-            <div class="footer-logo"><img src="logo-simples.png" alt="AAIC Logo"></div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p class="copyright">&copy; 2026 Associação Atlética do Instituto de Computação.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Instituto de Computação</p>
+        <div class="store-cta" data-reveal>
+          <p class="store-cta-text">Os produtos ainda não estão à venda. Acompanhe o lançamento pelo Instagram da atlética.</p>
+          <a class="btn btn--ghost" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">Seguir @atleticaicuff<span class="sr-only"> (abre em nova aba)</span><span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg></span></a>
         </div>
-    </footer>
-    <script src="script.js"></script>
+      </div>
+    </section>
+  </main>
+
+  <!-- chrome:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <!-- TODO(identidade): trocar pela logo oficial (versão para fundo verde-escuro). -->
+          <a class="footer-wordmark" href="index.html" data-placeholder="logo-footer"><span class="footer-wordmark-mark" aria-hidden="true">▽</span>AAIC</a>
+          <p class="footer-tagline">Associação Atlética do Instituto de Computação da Universidade Federal Fluminense.</p>
+          <p class="footer-coords">22°54′S · 43°08′O</p>
+        </div>
+        <nav aria-label="Rodapé">
+          <h2 class="footer-title">Navegação</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="index.html">Início</a></li>
+            <li><a class="footer-link" href="sobre.html">Sobre</a></li>
+            <li><a class="footer-link" href="times.html">Times</a></li>
+            <li><a class="footer-link" href="campeonatos.html">Campeonatos</a></li>
+            <li><a class="footer-link" href="trotes.html">Trotes</a></li>
+            <li><a class="footer-link" href="loja.html">Loja</a></li>
+            <li><a class="footer-link" href="eventos.html">Eventos</a></li>
+            <li><a class="footer-link" href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-title">Canais</h2>
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-mail"></use></svg>E-mail</a></li>
+            <!-- TODO(conteúdo): incluir Discord (convite), LinkedIn e outras redes quando houver links oficiais. -->
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Onde estamos</h2>
+          <address class="footer-text">Instituto de Computação · UFF<br>Campus da Praia Vermelha<br>Niterói · RJ</address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> AAIC · Associação Atlética do Instituto de Computação</p>
+        <p>Universidade Federal Fluminense</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /chrome:footer -->
 </body>
 </html>
