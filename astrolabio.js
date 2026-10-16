@@ -109,6 +109,10 @@
   const circle = (cx, cy, r, cls, extra = '') => `<circle cx="${f(cx)}" cy="${f(cy)}" r="${f(r)}" class="${cls}"${extra}/>`;
   const ring = (r) => `M${f(-r)} 0a${f(r)} ${f(r)} 0 1 0 ${f(2 * r)} 0a${f(r)} ${f(r)} 0 1 0 ${f(-2 * r)} 0Z`;
   const diamond = (x, y, s) => `M${f(x)} ${f(y - s)}L${f(x + s)} ${f(y)}L${f(x)} ${f(y + s)}L${f(x - s)} ${f(y)}Z`;
+
+  /* Monograma AAIC (logo primária) no eixo: o mesmo "d" do símbolo aaic-monograma de assets/icons.svg. */
+  const MONOGRAM = { viewBox: '272.47 651 378 481.71', ratio: 378 / 481.71, d: 'M410.17 675.11 L362.17 708.51 L354.77 731.81 L343.17 721.71 L272.47 771.11 L272.47 1012 L306.87 1036.1 L306.87 934 L341.27 909.9 L341.27 1060.4 L375.67 1084.5 L375.67 885.81 L410.07 861.71 L410.07 1108.51 L444.47 1132.71 L444.47 651 Z M341.27 868.51 L306.87 892.61 L306.87 788.61 L341.27 764.51 Z M410.07 820.31 L376.87 843.71 L375.67 844.51 L375.67 740.41 L410.07 716.31 Z M513.17 675.11 L513.17 1108.51 L478.77 1132.71 L478.77 651.01 Z M616.07 852.91 L616.07 788.61 L581.67 764.71 L581.67 1019.21 L616.07 995.31 L616.07 931.01 L650.47 907.31 L650.47 1012.51 L547.57 1084.51 L547.57 699.21 L582.97 724.01 L650.47 771.21 L650.47 877.01 Z' };
+
   const escapeXml = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
   /* ── Tempo ────────────────────────────────────────────────────────────── */
@@ -320,9 +324,9 @@
       ${numerals}
       <text class="astro-inscription"><textPath href="#astro-ins-top" startOffset="50%" text-anchor="middle">${escapeXml(top)}</textPath></text>
       <text class="astro-inscription"><textPath href="#astro-ins-bottom" startOffset="50%" text-anchor="middle">${escapeXml(bottom)}</textPath></text>
-      <g data-placeholder="logo-astrolabio">
-        ${circle(0, 0, 8.5, 'astro-pin')}
-        <text text-anchor="middle" dominant-baseline="central" class="astro-pin-mark">▽</text>
+      <g>
+        ${circle(0, 0, 10, 'astro-pin')}
+        <svg x="${f(-6.2 * MONOGRAM.ratio)}" y="-6.2" width="${f(12.4 * MONOGRAM.ratio)}" height="12.4" viewBox="${MONOGRAM.viewBox}" class="astro-pin-mark"><path fill-rule="evenodd" d="${MONOGRAM.d}"/></svg>
       </g>
     </svg>`;
   }

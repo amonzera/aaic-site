@@ -177,7 +177,7 @@
   /* ── Para quem abre o console ─────────────────────────────────────────── */
   console.log(
     '%c∇ AAIC · UFF%c\nCurioso(a)? O limbo do astrolábio da página inicial guarda uma mensagem em hexadecimal.\nQuer ajudar a manter este site? Fale com a diretoria: diretoria@aaic.com.br',
-    'font: 600 15px/2 "JetBrains Mono", monospace; color: #6FC5A8',
+    'font: 600 15px/2 "JetBrains Mono", monospace; color: #6FC5A5',
     'font: 12px/1.6 "JetBrains Mono", monospace'
   );
 })();
