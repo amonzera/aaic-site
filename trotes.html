@@ -3,33 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trotes e integração · AAIC UFF</title>
-  <meta name="description" content="Na AAIC, trote é acolhimento: recepção dos calouros, trote solidário, apadrinhamento e integração no Instituto de Computação da UFF.">
+  <title>Manual do calouro · AAIC UFF</title>
+  <meta name="description" content="Manual do calouro do Instituto de Computação da UFF: primeiros passos, grupo de WhatsApp dos calouros e o cronograma do trote da AAIC.">
   <link rel="canonical" href="https://aaic.com.br/trotes.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AAIC UFF">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Trotes e integração · AAIC UFF">
-  <meta property="og:description" content="Na AAIC, trote é acolhimento: recepção dos calouros, trote solidário, apadrinhamento e integração no Instituto de Computação da UFF.">
+  <meta property="og:title" content="Manual do calouro · AAIC UFF">
+  <meta property="og:description" content="Manual do calouro do Instituto de Computação da UFF: primeiros passos, grupo de WhatsApp dos calouros e o cronograma do trote da AAIC.">
   <meta property="og:url" content="https://aaic.com.br/trotes.html">
-  <!-- TODO(identidade): substituir a imagem de compartilhamento provisória quando a logo existir. -->
   <meta property="og:image" content="https://aaic.com.br/assets/img/og.jpg">
-  <meta name="theme-color" content="#060807">
+  <meta name="theme-color" content="#0A0A0A">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/castoro-titling-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/hanken-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261011">
-  <script src="script.js?v=20261011" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261013">
+  <script src="script.js?v=20261013" defer></script>
 </head>
 <body class="page-trotes">
   <!-- chrome:nav -->
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-nav" data-nav>
     <nav class="nav-island" aria-label="Principal">
-      <!-- TODO(identidade): trocar a marca provisória "▽ AAIC" pela logo oficial (SVG, ~28 px de altura). -->
-      <a class="nav-brand" href="index.html" data-placeholder="logo-nav">
-        <span class="nav-brand-mark" aria-hidden="true">▽</span>
+      <a class="nav-brand" href="index.html">
+        <svg class="nav-brand-mark" aria-hidden="true"><use href="assets/icons.svg?v=20261013#aaic-monograma"></use></svg>
         <span>AAIC</span>
         <span class="sr-only">— página inicial</span>
       </a>
@@ -40,10 +38,10 @@
       <div class="nav-panel" id="menu" data-nav-panel>
         <ul class="nav-links" role="list">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="trotes.html" aria-current="page">Calouros</a></li>
           <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="times.html">Times</a></li>
           <li class="nav-item"><a class="nav-link" href="campeonatos.html">Campeonatos</a></li>
-          <li class="nav-item"><a class="nav-link" href="trotes.html" aria-current="page">Trotes</a></li>
           <li class="nav-item"><a class="nav-link" href="loja.html">Loja</a></li>
           <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
           <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
@@ -60,38 +58,178 @@
   <main id="conteudo" tabindex="-1">
     <header class="page-header">
       <div class="container page-header-inner">
-        <p class="label"><a class="label-link" href="index.html">AAIC</a> <span aria-hidden="true">/</span> Trotes</p>
-        <h1 class="page-title">Trotes e integração</h1>
-        <p class="page-lede">Bem-vindos ao Instituto de Computação!</p>
+        <p class="label"><a class="label-link" href="index.html">AAIC</a> <span aria-hidden="true">/</span> Calouros</p>
+        <p class="calouro-hello" aria-hidden="true">Hello, AAIC!</p>
+        <h1 class="page-title">Manual do calouro</h1>
+        <p class="page-lede">Bem-vindos ao Instituto de Computação! Aqui está o que fazer primeiro, onde saem os avisos e quando acontece cada etapa do trote.</p>
+        <div class="calouro-actions">
+          <!-- TODO(conteúdo): link do grupo de WhatsApp dos calouros. Quando existir, troque o href
+               pelo convite (https://chat.whatsapp.com/…), apague o trecho sr-only ": link em breve…"
+               e apague o parágrafo calouro-pending logo abaixo. O mesmo link aparece no passo 01. -->
+          <a class="btn" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">Grupo do WhatsApp<span class="sr-only">: link em breve; por enquanto, abre o Instagram da atlética em nova aba</span><span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-whatsapp"></use></svg></span></a>
+          <a class="link-arrow" href="#cronograma">Cronograma do trote<svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-arrow-right"></use></svg></a>
+        </div>
+        <p class="calouro-pending"><span class="chip">Link em breve</span> Até o grupo abrir, os avisos saem no @atleticaicuff.</p>
       </div>
     </header>
 
-    <section class="section" aria-labelledby="etapas-title">
+    <section class="section" aria-labelledby="passos-title">
       <div class="container">
-        <p class="trotes-manifesto">A entrada na universidade é um momento único. Na AAIC, o trote é sinônimo de acolhimento, solidariedade e muita diversão. <strong>Repudiamos qualquer tipo de violência ou constrangimento.</strong> Aqui, o calouro já entra fazendo parte da família!</p>
-        <h2 class="sr-only" id="etapas-title">Etapas da integração</h2>
+        <div class="section-head">
+          <p class="label"><span class="label-mark" aria-hidden="true">◇</span> Comece por aqui</p>
+          <h2 class="section-title" id="passos-title">Primeiros passos</h2>
+          <p class="section-lede">Quatro passos, nesta ordem, para não perder nada do começo do semestre.</p>
+        </div>
+        <ol class="first-steps" role="list">
+          <li class="first-step" data-reveal>
+            <span class="first-step-index" aria-hidden="true">01</span>
+            <div class="first-step-body">
+              <h3 class="first-step-title">Entre no grupo do WhatsApp</h3>
+              <p class="first-step-text">É por lá que avisamos datas, horários, locais e qualquer mudança no trote.</p>
+            </div>
+            <!-- TODO(conteúdo): mesmo link do grupo de WhatsApp do topo da página. -->
+            <a class="link-arrow first-step-action" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">Entrar no grupo<span class="sr-only">: link em breve; por enquanto, abre o Instagram da atlética em nova aba</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-arrow-up-right"></use></svg></a>
+          </li>
+          <li class="first-step" data-reveal>
+            <span class="first-step-index" aria-hidden="true">02</span>
+            <div class="first-step-body">
+              <h3 class="first-step-title">Siga @atleticaicuff</h3>
+              <p class="first-step-text">Fotos, festas, campeonatos e os avisos que valem para todo o IC.</p>
+            </div>
+            <a class="link-arrow first-step-action" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">Abrir o Instagram<span class="sr-only"> (abre em nova aba)</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-arrow-up-right"></use></svg></a>
+          </li>
+          <li class="first-step" data-reveal>
+            <span class="first-step-index" aria-hidden="true">03</span>
+            <div class="first-step-body">
+              <h3 class="first-step-title">Guarde o cronograma do trote</h3>
+              <p class="first-step-text">As quatro etapas estão logo abaixo, em ordem. Salve esta página: as datas entram aqui assim que forem confirmadas.</p>
+            </div>
+            <a class="link-arrow first-step-action" href="#cronograma">Ver o cronograma<svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-arrow-right"></use></svg></a>
+          </li>
+          <li class="first-step" data-reveal>
+            <span class="first-step-index" aria-hidden="true">04</span>
+            <div class="first-step-body">
+              <h3 class="first-step-title">Venha para a recepção</h3>
+              <p class="first-step-text">É a primeira etapa: você conhece o campus, a sua turma e a atlética de uma vez.</p>
+            </div>
+            <a class="link-arrow first-step-action" href="https://www.google.com/maps/search/?api=1&amp;query=Instituto%20de%20Computa%C3%A7%C3%A3o%20UFF%20Niter%C3%B3i" target="_blank" rel="noopener">Onde fica o IC<span class="sr-only"> (abre o mapa em nova aba)</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-arrow-up-right"></use></svg></a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--green" id="cronograma" aria-labelledby="cronograma-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="label"><span class="label-mark" aria-hidden="true">◇</span> Cronograma geral</p>
+          <h2 class="section-title" id="cronograma-title">As quatro etapas do trote</h2>
+          <p class="section-lede">Datas, horários e locais saem primeiro no grupo do WhatsApp e no Instagram, e depois ficam registrados aqui.</p>
+        </div>
+        <!-- TODO(conteúdo): preencher data, horário e local de cada etapa. Com a data, use
+             <time datetime="AAAA-MM-DD">dd/mm</time> dentro do <dd> e apague o atributo data-pending dele. -->
         <ol class="trote-path" role="list">
           <li class="trote-step" data-reveal>
             <span class="trote-step-index" aria-hidden="true">01</span>
             <h3 class="trote-step-title">Recepção dos calouros</h3>
-            <p class="trote-step-text">Apresentação da Universidade, tour pelo campus e as primeiras orientações para sobreviver às matérias de programação.</p>
+            <p class="trote-step-text">Apresentação da universidade, tour pelo campus e as primeiras orientações para sobreviver às matérias de programação.</p>
+            <dl class="trote-step-meta">
+              <div class="trote-step-fact"><dt class="trote-step-label">Data</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+              <div class="trote-step-fact"><dt class="trote-step-label">Horário</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+              <div class="trote-step-fact"><dt class="trote-step-label">Local</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+            </dl>
           </li>
           <li class="trote-step" data-reveal>
             <span class="trote-step-index" aria-hidden="true">02</span>
             <h3 class="trote-step-title">Trote solidário</h3>
             <p class="trote-step-text">Incentivamos a doação de sangue para instituições de caridade de Niterói. Fazer o bem também é papel do universitário!</p>
+            <dl class="trote-step-meta">
+              <div class="trote-step-fact"><dt class="trote-step-label">Data</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+              <div class="trote-step-fact"><dt class="trote-step-label">Horário</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+              <div class="trote-step-fact"><dt class="trote-step-label">Local</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+            </dl>
           </li>
           <li class="trote-step" data-reveal>
             <span class="trote-step-index" aria-hidden="true">03</span>
             <h3 class="trote-step-title">Apadrinhamento</h3>
-            <p class="trote-step-text">Cada calouro recebe um “padrinho” ou “madrinha” veterano para ajudar com dicas de professores, matérias e a vida na UFF.</p>
+            <p class="trote-step-text">Cada calouro recebe um padrinho ou madrinha veterano para ajudar com dicas de professores, matérias e a vida na UFF.</p>
+            <dl class="trote-step-meta">
+              <div class="trote-step-fact"><dt class="trote-step-label">Data</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+              <div class="trote-step-fact"><dt class="trote-step-label">Horário</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+              <div class="trote-step-fact"><dt class="trote-step-label">Local</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+            </dl>
           </li>
           <li class="trote-step" data-reveal>
             <span class="trote-step-index" aria-hidden="true">04</span>
             <h3 class="trote-step-title">Acolhimento</h3>
-            <p class="trote-step-text">A reunião com a coordenação para apresentação do curso, Atlética e outras entidades. Aqui rola sorteios, resultado dos trotes e muito mais!</p>
+            <p class="trote-step-text">Reunião com a coordenação para apresentar o curso, a atlética e as outras entidades. Tem sorteio, resultado dos trotes e muito mais!</p>
+            <dl class="trote-step-meta">
+              <div class="trote-step-fact"><dt class="trote-step-label">Data</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+              <div class="trote-step-fact"><dt class="trote-step-label">Horário</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+              <div class="trote-step-fact"><dt class="trote-step-label">Local</dt><dd class="trote-step-value" data-pending>a confirmar</dd></div>
+            </dl>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <section class="section section--light" aria-labelledby="compromisso-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="label"><span class="label-mark" aria-hidden="true">◇</span> Nosso compromisso</p>
+          <h2 class="section-title" id="compromisso-title">Trote aqui é acolhimento</h2>
+        </div>
+        <div class="calouro-pledge">
+          <p class="trotes-manifesto">A entrada na universidade é um momento único. Na AAIC, o trote é sinônimo de acolhimento, solidariedade e muita diversão. <strong>Repudiamos qualquer tipo de violência ou constrangimento.</strong> Aqui, o calouro já entra fazendo parte da família!</p>
+          <!-- TODO(conteúdo): regras redigidas a partir do texto acima; revisar com a diretoria. -->
+          <ul class="calouro-rules" role="list">
+            <li class="calouro-rule">Participar é escolha sua: nenhuma etapa é obrigatória.</li>
+            <li class="calouro-rule">Ninguém pode obrigar você a beber, se expor ou fazer o que não quer.</li>
+            <li class="calouro-rule">Algo incomodou? Fale com a diretoria pelo <a href="mailto:diretoria@aaic.com.br">diretoria@aaic.com.br</a> ou por mensagem no <a href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener">@atleticaicuff<span class="sr-only"> (abre em nova aba)</span></a>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="duvidas-title">
+      <div class="container faq-grid">
+        <div class="section-head faq-head">
+          <p class="label"><span class="label-mark" aria-hidden="true">◇</span> Primeira semana</p>
+          <h2 class="section-title" id="duvidas-title">Dúvidas frequentes</h2>
+        </div>
+        <!-- TODO(conteúdo): respostas provisórias; revisar com a diretoria. -->
+        <div class="faq">
+          <details class="faq-item">
+            <summary class="faq-question">O trote é obrigatório?</summary>
+            <p class="faq-answer">Não. Todas as etapas são abertas e você participa do que quiser.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Sou de Sistemas de Informação ou de IA e Ciência de Dados. É para mim também?</summary>
+            <p class="faq-answer">É. A AAIC é uma só atlética para todos os cursos do Instituto de Computação: Ciência da Computação, Sistemas de Informação e IA e Ciência de Dados.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Perdi uma etapa. E agora?</summary>
+            <p class="faq-answer">Sem problema: as outras etapas continuam abertas para você. Acompanhe os avisos no grupo do WhatsApp e no Instagram.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Onde fica o Instituto de Computação?</summary>
+            <p class="faq-answer">No Campus da Praia Vermelha, em Niterói. <a href="https://www.google.com/maps/search/?api=1&amp;query=Instituto%20de%20Computa%C3%A7%C3%A3o%20UFF%20Niter%C3%B3i" target="_blank" rel="noopener">Abrir no mapa<span class="sr-only"> (abre em nova aba)</span></a>.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Onde encontro a coordenação do meu curso?</summary>
+            <p class="faq-answer">No site do Instituto de Computação, <a href="https://www.ic.uff.br/" target="_blank" rel="noopener">ic.uff.br<span class="sr-only"> (abre em nova aba)</span></a>. A coordenação também aparece na etapa de acolhimento.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Como entro para um time?</summary>
+            <p class="faq-answer">Veja as seis modalidades na página <a href="times.html">Times</a> e fale com a diretoria.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--green" aria-labelledby="ajuda-title">
+      <div class="container cta-band-inner">
+        <h2 class="cta-band-title" id="ajuda-title">Ficou alguma dúvida? Fale com a diretoria.</h2>
+        <a class="btn" href="contato.html">Entrar em contato<span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-arrow-up-right"></use></svg></span></a>
       </div>
     </section>
   </main>
@@ -101,8 +239,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <!-- TODO(identidade): trocar pela logo oficial (versão para fundo verde-escuro). -->
-          <a class="footer-wordmark" href="index.html" data-placeholder="logo-footer"><span class="footer-wordmark-mark" aria-hidden="true">▽</span>AAIC</a>
+          <a class="footer-wordmark" href="index.html"><svg class="footer-wordmark-mark" aria-hidden="true"><use href="assets/icons.svg?v=20261013#aaic-monograma"></use></svg>AAIC</a>
           <p class="footer-tagline">Associação Atlética do Instituto de Computação da Universidade Federal Fluminense.</p>
           <p class="footer-coords">22°54′S · 43°08′O</p>
         </div>
@@ -110,10 +247,10 @@
           <h2 class="footer-title">Navegação</h2>
           <ul class="footer-links" role="list">
             <li><a class="footer-link" href="index.html">Início</a></li>
+            <li><a class="footer-link" href="trotes.html">Calouros</a></li>
             <li><a class="footer-link" href="sobre.html">Sobre</a></li>
             <li><a class="footer-link" href="times.html">Times</a></li>
             <li><a class="footer-link" href="campeonatos.html">Campeonatos</a></li>
-            <li><a class="footer-link" href="trotes.html">Trotes</a></li>
             <li><a class="footer-link" href="loja.html">Loja</a></li>
             <li><a class="footer-link" href="eventos.html">Eventos</a></li>
             <li><a class="footer-link" href="contato.html">Contato</a></li>
@@ -122,8 +259,8 @@
         <div>
           <h2 class="footer-title">Canais</h2>
           <ul class="footer-links" role="list">
-            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
-            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-mail"></use></svg>E-mail</a></li>
+            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-mail"></use></svg>E-mail</a></li>
             <!-- TODO(conteúdo): incluir Discord (convite), LinkedIn e outras redes quando houver links oficiais. -->
           </ul>
         </div>

@@ -5,15 +5,17 @@ Site da **Associação Atlética do Instituto de Computação da UFF** ([aaic.co
 JavaScript puros: não tem build, framework ou dependências para instalar.
 
 A identidade visual (astronomia, constelações, matemática, código e antiguidade clássica, com a mascote
-**Hipátia de Alexandria**) ainda está sendo fechada. Tudo o que falta definir está marcado no código e
-listado em [Pendências da identidade](#pendências-da-identidade).
+**Hipátia de Alexandria**) já usa a paleta oficial, o monograma e a Hipátia do kit de branding; a
+tipografia ainda é provisória. Tudo o que falta está marcado no código e listado em
+[Pendências da identidade](#pendências-da-identidade).
 
 ## Estrutura
 
 ```
 .
 ├── index.html, sobre.html, times.html, campeonatos.html,
-│   trotes.html, loja.html, eventos.html, contato.html   ← as 8 páginas (mesmas URLs de sempre)
+│   trotes.html, loja.html, eventos.html, contato.html   ← as 8 páginas (mesmas URLs de sempre;
+│                                                           trotes.html é o Manual do calouro)
 ├── 404.html          ← página de erro (usa caminhos absolutos: o Pages a serve em qualquer URL)
 ├── style.css         ← folha de estilo única; o bloco IDENTIDADE fica no topo
 ├── script.js         ← menu, revelação no scroll, contato (mailto), ano do rodapé
@@ -21,7 +23,7 @@ listado em [Pendências da identidade](#pendências-da-identidade).
 ├── assets/
 │   ├── fonts/        ← fontes self-hosted (woff2) + licenças OFL
 │   ├── img/          ← imagens WebP (1200 e 640 px), limbo.svg, astrolabio.svg (sem JS)
-│   ├── icons.svg     ← sprite de ícones e pictogramas dos times
+│   ├── icons.svg     ← sprite de ícones, pictogramas dos times e o monograma (#aaic-monograma)
 │   └── favicon.svg
 ├── CNAME             ← domínio aaic.com.br (não mexer)
 └── .nojekyll         ← o Pages publica os arquivos como estão, sem passar pelo Jekyll
@@ -65,6 +67,16 @@ Copie um bloco existente e edite. Os blocos já trazem a revelação no scroll (
   pictograma (`#p-futsal`, `#p-basquete`, `#p-volei`, `#p-handebol`, `#p-esports`, `#p-cheer`).
 - **Produto** (`loja.html`): duplique um `<li data-reveal>…</li>` da `.product-grid`.
 - **Campeonato** (`campeonatos.html`): já existe um bloco do InterUFF comentado; descomente e preencha.
+- **Manual do calouro** (`trotes.html`, "Calouros" no menu, logo depois de "Início"):
+  - **Grupo do WhatsApp:** o link aparece em dois lugares da página (botão do topo e passo 01), ambos
+    marcados com `TODO(conteúdo)`. Até o grupo abrir, os dois apontam para o Instagram e o topo mostra o
+    aviso "Link em breve" (parágrafo `calouro-pending`). Com o convite em mãos, troque os dois `href`,
+    apague os trechos `sr-only` que falam em "link em breve" e o parágrafo do aviso.
+  - **Cronograma do trote:** cada etapa tem Data, Horário e Local. Troque o "a confirmar" pelo valor
+    (para datas, `<time datetime="2027-03-15">15/03</time>`) e apague o atributo `data-pending` do
+    `<dd>`: é ele que deixa o campo apagado, em fonte mono.
+  - A home chama o manual em três pontos: o link "Sou calouro" do hero, a faixa logo abaixo dele e o
+    card do índice.
 - **Imagens:**
   - Gere WebP em 1200 e 640 px de largura, com nomes em minúsculas (o Pages diferencia `.JPG` de `.jpg`).
   - Use `srcset` e sempre informe `width` e `height` reais, para a página não "pular" ao carregar.
@@ -81,25 +93,34 @@ Liste tudo que falta com:
 grep -rn "TODO(identidade)\|TODO(conteúdo)\|data-placeholder" --include=*.html --include=*.css --include=*.js .
 ```
 
-Os espaços reservados aparecem no site como uma "planta técnica": quadriculado com cruzetas nos cantos e
-o formato recomendado escrito no centro.
+Os espaços reservados aparecem no site como uma "planta técnica": quadriculado com cruzetas nos cantos.
+Nos times, o formato recomendado vem escrito no centro; na loja, o espaço fica vazio, sem texto.
 
 | Item | Onde | Como trocar | Formato |
 |---|---|---|---|
-| **Cores oficiais** | `style.css`, bloco IDENTIDADE: `--brand-black`, `--brand-green`, `--brand-white` | Troque os 3 hex; os outros tons se recalculam. Atualize também o valor de reserva de `--green-bright` (logo abaixo), a `theme-color` dos HTML e as cores de `assets/favicon.svg` e `assets/img/limbo.svg` | hex |
 | **Tipografia** | `style.css`: `@font-face` e `--font-display`, `--font-text`, `--font-mono` | Substitua os woff2 em `assets/fonts/` (com a licença) e os nomes | woff2, subset latino |
-| **Logo na navegação** | `data-placeholder="logo-nav"` (todas as páginas) | Troque o conteúdo do link pela logo | SVG, ~28 px de altura |
-| **Logo no rodapé** | `data-placeholder="logo-footer"` (todas as páginas) | Idem, na versão para fundo verde-escuro | SVG |
-| **Logo no astrolábio** | `astrolabio.js`, grupo `data-placeholder="logo-astrolabio"` (eixo central) | Troque o `▽` por um `<path>` ou `<image>` | SVG simples, monocromático |
-| **Favicon e ícone iOS** | `assets/favicon.svg`, `assets/img/apple-touch-icon.png` | Substitua os arquivos | SVG + PNG 180×180 |
-| **Imagem de compartilhamento** | `assets/img/og.jpg` (provisória) | Substitua o arquivo | JPG ou PNG 1200×630 |
-| **Mascote (home)** | `data-placeholder="mascote-home"` em `index.html` | Troque o `.placeholder` por `<img>` | PNG/WebP transparente, 1200×1500 |
-| **Mascote (sobre)** | `data-placeholder="mascote-sobre"` em `sobre.html` | Idem | PNG/WebP transparente, 1200×1500 |
 | **Fotos dos times** | `data-placeholder="time-*"` em `times.html` | Troque o `.placeholder` por `<img>` | 1600×1200 |
-| **Fotos dos produtos** | `data-placeholder="produto-*"` em `loja.html` | Idem | 1200×1200, fundo neutro |
+| **Fotos dos produtos** | `data-placeholder="produto-*"` em `loja.html` (caneca, bottons, uniforme) | Troque o `.placeholder` por `<img class="product-card-img">`, como na camisa | 1200×1200, fundo neutro |
 | **Arte do campeonato** | `lleague-*.webp` (Lovelace League, identidade antiga roxa) em `campeonatos.html` e na home | Hoje aparece em duotone verde; troque pela arte nova | WebP 1200 e 640 |
 
+### O que já veio do kit de branding
+
+Os arquivos de origem ficam fora deste repositório, na pasta do projeto da AAIC (`logos/`, `camisa/`).
+
+| Item | Origem | Onde está no site |
+|---|---|---|
+| **Paleta oficial** | `#0A0A0A`, `#0F3D2E`, `#FFFFFF` (o cinza `#D9D9D9` não tem token) | Bloco IDENTIDADE do `style.css`, `theme-color` dos HTML, `favicon.svg` e `limbo.svg`. O acento menta (`--green-bright`) continua derivado do verde e fora da paleta: é decisão em aberto do kit. Se as cores mudarem, atualize também o valor de reserva dele, logo abaixo do bloco |
+| **Monograma** (logo primária) | `logos/1-primaria/monograma/svg/aaic-monograma-og-branco.svg` | Símbolo `#aaic-monograma` do sprite (nav e rodapé), constante `MONOGRAM` do `astrolabio.js` (eixo), `favicon.svg` e `apple-touch-icon.png`. Sempre em branco: verde sobre preto reprova no contraste (1,63:1) |
+| **Hipátia** (logo secundária) | `camisa/Versão Camisa Preta/Estampa Costas/Elementos/01-…` e `02-…png`, com o marfim trocado por branco | `hipatia-circulo-*.webp` (home) e `hipatia-*.webp` (sobre) |
+| **Camisa da AAIC** | `camisa/Versão Camisa Preta/Mockups/mockup-branco-no-preto-camisa-preta.jpg`, recorte quadrado das costas | `camisa-aaic-*.webp` (loja) |
+| **Imagem de compartilhamento** | Composição com a Hipátia e as fontes do site | `assets/img/og.jpg` (1200×630) |
+
 ### Pendências de conteúdo (`TODO(conteúdo)`)
+
+- **Manual do calouro** (`trotes.html`):
+  - Falta o link do grupo de WhatsApp dos calouros.
+  - Faltam data, horário e local das quatro etapas do trote.
+  - As regras de "Nosso compromisso" e as respostas das dúvidas são provisórias: revisar com a diretoria.
 
 - **Tese do hero:** "∃! atlética ∀ curso ∈ IC." A ordem é intencional: "existe uma única atlética para
   todo curso do IC". Com `∀` antes de `∃!`, leria "cada curso com a sua atlética".
@@ -167,6 +188,7 @@ do acesso**. Hipátia orientou a construção de um astrolábio, segundo as cart
   - Castoro Titling — Tiro Typeworks
   - Hanken Grotesk — Alfredo Marco Pradil
   - JetBrains Mono — JetBrains
-- **Ícones:** desenhados para este site no estilo de traço fino. O ícone do Discord foi adaptado do
+- **Ícones:** desenhados para este site no estilo de traço fino (inclusive o de WhatsApp, que é um
+  balão de conversa, não a logo oficial). O ícone do Discord foi adaptado do
   [Simple Icons](https://simpleicons.org) (CC0).
 - **Dados astronômicos:** [SIMBAD](https://simbad.cds.unistra.fr) (CDS, Estrasburgo).

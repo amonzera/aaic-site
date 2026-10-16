@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- TODO(identidade): favicon provisório (∇ + estrela). Trocar pela logo oficial. -->
-  <rect width="64" height="64" rx="14" fill="#060807"/>
-  <path d="M13 17h38L32 50Z" fill="none" stroke="#6FC5A8" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M32 22.5l1.6 3.9 3.9 1.6-3.9 1.6-1.6 3.9-1.6-3.9-3.9-1.6 3.9-1.6Z" fill="#F3F5F1"/>
+  <!-- Monograma AAIC (logo primária) em branco sobre o verde oficial #0F3D2E (12,16:1). -->
+  <rect width="64" height="64" rx="14" fill="#0F3D2E"/>
+  <svg x="16.3" y="12" width="31.39" height="40" viewBox="272.47 651 378 481.71">
+    <path fill="#FFFFFF" fill-rule="evenodd" d="M410.17 675.11 L362.17 708.51 L354.77 731.81 L343.17 721.71 L272.47 771.11 L272.47 1012 L306.87 1036.1 L306.87 934 L341.27 909.9 L341.27 1060.4 L375.67 1084.5 L375.67 885.81 L410.07 861.71 L410.07 1108.51 L444.47 1132.71 L444.47 651 Z M341.27 868.51 L306.87 892.61 L306.87 788.61 L341.27 764.51 Z M410.07 820.31 L376.87 843.71 L375.67 844.51 L375.67 740.41 L410.07 716.31 Z M513.17 675.11 L513.17 1108.51 L478.77 1132.71 L478.77 651.01 Z M616.07 852.91 L616.07 788.61 L581.67 764.71 L581.67 1019.21 L616.07 995.31 L616.07 931.01 L650.47 907.31 L650.47 1012.51 L547.57 1084.51 L547.57 699.21 L582.97 724.01 L650.47 771.21 L650.47 877.01 Z"/>
+  </svg>
 </svg>

@@ -12,24 +12,22 @@
   <meta property="og:title" content="Sobre · AAIC UFF">
   <meta property="og:description" content="A história da AAIC: duas atléticas do Instituto de Computação da UFF que viraram uma só, a nossa missão e por que a mascote é Hipátia de Alexandria.">
   <meta property="og:url" content="https://aaic.com.br/sobre.html">
-  <!-- TODO(identidade): substituir a imagem de compartilhamento provisória quando a logo existir. -->
   <meta property="og:image" content="https://aaic.com.br/assets/img/og.jpg">
-  <meta name="theme-color" content="#060807">
+  <meta name="theme-color" content="#0A0A0A">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/castoro-titling-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/hanken-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261011">
-  <script src="script.js?v=20261011" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261013">
+  <script src="script.js?v=20261013" defer></script>
 </head>
 <body class="page-sobre">
   <!-- chrome:nav -->
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-nav" data-nav>
     <nav class="nav-island" aria-label="Principal">
-      <!-- TODO(identidade): trocar a marca provisória "▽ AAIC" pela logo oficial (SVG, ~28 px de altura). -->
-      <a class="nav-brand" href="index.html" data-placeholder="logo-nav">
-        <span class="nav-brand-mark" aria-hidden="true">▽</span>
+      <a class="nav-brand" href="index.html">
+        <svg class="nav-brand-mark" aria-hidden="true"><use href="assets/icons.svg?v=20261013#aaic-monograma"></use></svg>
         <span>AAIC</span>
         <span class="sr-only">— página inicial</span>
       </a>
@@ -40,10 +38,10 @@
       <div class="nav-panel" id="menu" data-nav-panel>
         <ul class="nav-links" role="list">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="trotes.html">Calouros</a></li>
           <li class="nav-item"><a class="nav-link" href="sobre.html" aria-current="page">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="times.html">Times</a></li>
           <li class="nav-item"><a class="nav-link" href="campeonatos.html">Campeonatos</a></li>
-          <li class="nav-item"><a class="nav-link" href="trotes.html">Trotes</a></li>
           <li class="nav-item"><a class="nav-link" href="loja.html">Loja</a></li>
           <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
           <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
@@ -110,11 +108,8 @@
     <section class="section section--green" id="hipatia" aria-labelledby="hipatia-title">
       <div class="container hipatia-grid">
         <figure class="card hipatia-figure" data-reveal>
-          <!-- TODO(identidade): ilustração principal da mascote Hipátia (PNG ou WebP com fundo transparente, 1200×1500). -->
           <div class="card-core">
-            <div class="placeholder" data-placeholder="mascote-sobre">
-              <span class="placeholder-label"><span class="placeholder-title">Mascote · Hipátia</span>Ilustração principal · PNG ou WebP transparente · 1200×1500</span>
-            </div>
+            <img class="hipatia-img" src="assets/img/hipatia-1200.webp" srcset="assets/img/hipatia-640.webp 640w, assets/img/hipatia-1200.webp 1200w" sizes="(min-width: 64rem) 33rem, 100vw" width="1200" height="1500" alt="Hipátia, mascote da AAIC: encapuzada, de olhos fechados e com a tiara de meandro grego, sobre o escudo com o monograma AAIC." loading="lazy" decoding="async">
           </div>
         </figure>
         <div class="hipatia-copy">
@@ -134,8 +129,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <!-- TODO(identidade): trocar pela logo oficial (versão para fundo verde-escuro). -->
-          <a class="footer-wordmark" href="index.html" data-placeholder="logo-footer"><span class="footer-wordmark-mark" aria-hidden="true">▽</span>AAIC</a>
+          <a class="footer-wordmark" href="index.html"><svg class="footer-wordmark-mark" aria-hidden="true"><use href="assets/icons.svg?v=20261013#aaic-monograma"></use></svg>AAIC</a>
           <p class="footer-tagline">Associação Atlética do Instituto de Computação da Universidade Federal Fluminense.</p>
           <p class="footer-coords">22°54′S · 43°08′O</p>
         </div>
@@ -143,10 +137,10 @@
           <h2 class="footer-title">Navegação</h2>
           <ul class="footer-links" role="list">
             <li><a class="footer-link" href="index.html">Início</a></li>
+            <li><a class="footer-link" href="trotes.html">Calouros</a></li>
             <li><a class="footer-link" href="sobre.html">Sobre</a></li>
             <li><a class="footer-link" href="times.html">Times</a></li>
             <li><a class="footer-link" href="campeonatos.html">Campeonatos</a></li>
-            <li><a class="footer-link" href="trotes.html">Trotes</a></li>
             <li><a class="footer-link" href="loja.html">Loja</a></li>
             <li><a class="footer-link" href="eventos.html">Eventos</a></li>
             <li><a class="footer-link" href="contato.html">Contato</a></li>
@@ -155,8 +149,8 @@
         <div>
           <h2 class="footer-title">Canais</h2>
           <ul class="footer-links" role="list">
-            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
-            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-mail"></use></svg>E-mail</a></li>
+            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-mail"></use></svg>E-mail</a></li>
             <!-- TODO(conteúdo): incluir Discord (convite), LinkedIn e outras redes quando houver links oficiais. -->
           </ul>
         </div>

@@ -12,24 +12,22 @@
   <meta property="og:title" content="Campeonatos · AAIC UFF">
   <meta property="og:description" content="Campeonatos da AAIC UFF, com inscrições abertas para o Campeonato Interno de E-Sports.">
   <meta property="og:url" content="https://aaic.com.br/campeonatos.html">
-  <!-- TODO(identidade): substituir a imagem de compartilhamento provisória quando a logo existir. -->
   <meta property="og:image" content="https://aaic.com.br/assets/img/og.jpg">
-  <meta name="theme-color" content="#060807">
+  <meta name="theme-color" content="#0A0A0A">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/castoro-titling-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/hanken-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261011">
-  <script src="script.js?v=20261011" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261013">
+  <script src="script.js?v=20261013" defer></script>
 </head>
 <body class="page-campeonatos">
   <!-- chrome:nav -->
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-nav" data-nav>
     <nav class="nav-island" aria-label="Principal">
-      <!-- TODO(identidade): trocar a marca provisória "▽ AAIC" pela logo oficial (SVG, ~28 px de altura). -->
-      <a class="nav-brand" href="index.html" data-placeholder="logo-nav">
-        <span class="nav-brand-mark" aria-hidden="true">▽</span>
+      <a class="nav-brand" href="index.html">
+        <svg class="nav-brand-mark" aria-hidden="true"><use href="assets/icons.svg?v=20261013#aaic-monograma"></use></svg>
         <span>AAIC</span>
         <span class="sr-only">— página inicial</span>
       </a>
@@ -40,10 +38,10 @@
       <div class="nav-panel" id="menu" data-nav-panel>
         <ul class="nav-links" role="list">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="trotes.html">Calouros</a></li>
           <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="times.html">Times</a></li>
           <li class="nav-item"><a class="nav-link" href="campeonatos.html" aria-current="page">Campeonatos</a></li>
-          <li class="nav-item"><a class="nav-link" href="trotes.html">Trotes</a></li>
           <li class="nav-item"><a class="nav-link" href="loja.html">Loja</a></li>
           <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
           <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
@@ -82,7 +80,7 @@
               </div>
               <h2 class="champ-card-title" id="destaque-title">Campeonato Interno de E-Sports</h2>
               <p class="champ-card-text">Disputado a cada semestre entre os alunos do Instituto de Computação. As inscrições estão abertas!</p>
-              <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc7xX2kx362kwQ0MTw8ml7Ia0H1G9NUqRv9_m_3YtnXrfiwCg/viewform" target="_blank" rel="noopener">Fazer inscrição<span class="sr-only"> (abre o formulário em nova aba)</span><span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-up-right"></use></svg></span></a>
+              <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc7xX2kx362kwQ0MTw8ml7Ia0H1G9NUqRv9_m_3YtnXrfiwCg/viewform" target="_blank" rel="noopener">Fazer inscrição<span class="sr-only"> (abre o formulário em nova aba)</span><span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-arrow-up-right"></use></svg></span></a>
             </div>
           </div>
         </article>
@@ -97,7 +95,7 @@
               <div class="champ-card-chips"><span class="chip chip--plain">Anual</span></div>
               <h2 class="champ-card-title">InterUFF</h2>
               <p class="champ-card-text"></p>
-              <a class="btn" href="#">Ver resultados<span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-arrow-up-right"></use></svg></span></a>
+              <a class="btn" href="#">Ver resultados<span class="btn-icon" aria-hidden="true"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-arrow-up-right"></use></svg></span></a>
             </div>
           </div>
         </article>
@@ -113,8 +111,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <!-- TODO(identidade): trocar pela logo oficial (versão para fundo verde-escuro). -->
-          <a class="footer-wordmark" href="index.html" data-placeholder="logo-footer"><span class="footer-wordmark-mark" aria-hidden="true">▽</span>AAIC</a>
+          <a class="footer-wordmark" href="index.html"><svg class="footer-wordmark-mark" aria-hidden="true"><use href="assets/icons.svg?v=20261013#aaic-monograma"></use></svg>AAIC</a>
           <p class="footer-tagline">Associação Atlética do Instituto de Computação da Universidade Federal Fluminense.</p>
           <p class="footer-coords">22°54′S · 43°08′O</p>
         </div>
@@ -122,10 +119,10 @@
           <h2 class="footer-title">Navegação</h2>
           <ul class="footer-links" role="list">
             <li><a class="footer-link" href="index.html">Início</a></li>
+            <li><a class="footer-link" href="trotes.html">Calouros</a></li>
             <li><a class="footer-link" href="sobre.html">Sobre</a></li>
             <li><a class="footer-link" href="times.html">Times</a></li>
             <li><a class="footer-link" href="campeonatos.html">Campeonatos</a></li>
-            <li><a class="footer-link" href="trotes.html">Trotes</a></li>
             <li><a class="footer-link" href="loja.html">Loja</a></li>
             <li><a class="footer-link" href="eventos.html">Eventos</a></li>
             <li><a class="footer-link" href="contato.html">Contato</a></li>
@@ -134,8 +131,8 @@
         <div>
           <h2 class="footer-title">Canais</h2>
           <ul class="footer-links" role="list">
-            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
-            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261011#i-mail"></use></svg>E-mail</a></li>
+            <li><a class="footer-link" href="https://www.instagram.com/atleticaicuff/" target="_blank" rel="noopener"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-instagram"></use></svg>Instagram<span class="sr-only"> (abre em nova aba)</span></a></li>
+            <li><a class="footer-link" href="mailto:diretoria@aaic.com.br"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg?v=20261013#i-mail"></use></svg>E-mail</a></li>
             <!-- TODO(conteúdo): incluir Discord (convite), LinkedIn e outras redes quando houver links oficiais. -->
           </ul>
         </div>
