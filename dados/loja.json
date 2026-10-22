@@ -1,0 +1,33 @@
+{
+  "produtos": [
+    {
+      "id": "camisa",
+      "nome": "Camisa da AAIC",
+      "chamada": "a camisa da AAIC",
+      "descricao": "a camisa oficial da AAIC, com Hipátia nas costas",
+      "status": "pre-venda",
+      "imagem": "camisa-aaic",
+      "alt": "Costas da camisa preta da AAIC: Hipátia diante do círculo rúnico, o título Hipátia de Alexandria, o ano 1998 e três janelas de busca.",
+      "link": "https://forms.gle/ZE8Q34ijS3tJk1YFA",
+      "cta": "Garantir a camisa"
+    },
+    {
+      "id": "caneca",
+      "nome": "Caneca + tirante",
+      "chamada": "a caneca com tirante",
+      "status": "em-breve"
+    },
+    {
+      "id": "bottons",
+      "nome": "Bottons",
+      "chamada": "os bottons",
+      "status": "em-breve"
+    },
+    {
+      "id": "uniforme",
+      "nome": "Uniforme da atlética",
+      "chamada": "o uniforme",
+      "status": "em-breve"
+    }
+  ]
+}
