@@ -1460,7 +1460,7 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .index-item--champ {
+    .index-item--store {
       grid-column: 1 / -1;
     }
   }
@@ -1471,11 +1471,11 @@
       gap: 1.25rem;
     }
 
-    .index-item--champ { grid-column: 1 / span 7; grid-row: span 2; }
+    .index-item--store { grid-column: 1 / span 7; grid-row: span 2; }
     .index-item--events { grid-column: 8 / span 5; }
-    .index-item--teams { grid-column: 8 / span 5; }
+    .index-item--champ { grid-column: 8 / span 5; }
     .index-item--trotes { grid-column: 1 / span 4; }
-    .index-item--store { grid-column: 5 / span 4; }
+    .index-item--teams { grid-column: 5 / span 4; }
     .index-item--contact { grid-column: 9 / span 4; }
   }
 
