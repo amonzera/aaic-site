@@ -1,0 +1,10 @@
+{
+  "times": [
+    { "id": "futsal", "nome": "Futsal", "icone": "p-futsal", "detalhe": "Masculino e feminino", "status": "em-breve" },
+    { "id": "basquete", "nome": "Basquete", "icone": "p-basquete", "status": "em-breve" },
+    { "id": "volei", "nome": "Vôlei", "icone": "p-volei", "status": "em-breve" },
+    { "id": "handebol", "nome": "Handebol", "icone": "p-handebol", "status": "em-breve" },
+    { "id": "esports", "nome": "E-sports", "icone": "p-esports", "status": "em-breve" },
+    { "id": "cheer", "nome": "Cheerleading", "icone": "p-cheer", "status": "em-breve" }
+  ]
+}

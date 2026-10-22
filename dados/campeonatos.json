@@ -1,0 +1,27 @@
+{
+  "campeonatos": [
+    {
+      "id": "esports-interno",
+      "nome": "Campeonato Interno de E-Sports",
+      "status": "em-breve",
+      "frequencia": "Semestral",
+      "texto": "Disputado a cada semestre entre os alunos do Instituto de Computação. Em breve, mais novidades. Acompanhe o Instagram da atlética.",
+      "resumo": "Campeonato Interno de E-Sports, disputado a cada semestre.",
+      "imagem": "lleague",
+      "alt": "Arte de divulgação da Lovelace League, com o convite: venha competir conosco.",
+      "duotone": true,
+      "pendencia": "arte da Lovelace League com a identidade antiga (roxa), exibida em duotone até existir arte nova."
+    },
+    {
+      "id": "interuff",
+      "nome": "InterUFF",
+      "status": "em-breve",
+      "frequencia": "Anual",
+      "texto": "",
+      "resumo": "",
+      "imagem": "interuff",
+      "link": { "rotulo": "Ver resultados", "url": "#" },
+      "visivel": false
+    }
+  ]
+}
