@@ -137,7 +137,7 @@ Os arquivos de origem ficam fora deste repositório, na pasta do projeto da AAIC
 ## O astrolábio vivo
 
 A página inicial abre com um astrolábio que mostra o **céu real sobre o IC (22°54′S 43°08′O) no momento
-do acesso**. Hipátia orientou a construção de um astrolábio, segundo as cartas de seu aluno Sinésio.
+do acesso**. O aluno de Hipátia, Sinésio, conta que projetou um astrolábio com o que aprendeu com ela.
 
 - **Como funciona:**
   - Usa a projeção estereográfica de um astrolábio austral: o centro é o polo sul celeste, e a borda da
