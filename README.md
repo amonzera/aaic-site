@@ -2,7 +2,9 @@
 
 Site da **Associação Atlética do Instituto de Computação da UFF** ([aaic.com.br](https://aaic.com.br)).
 É um site estático publicado pelo **GitHub Pages a partir da raiz do branch `main`**. Usa só HTML, CSS e
-JavaScript puros: não tem build, framework ou dependências para instalar.
+JavaScript puros: não tem build, framework ou dependências para instalar. Produtos, campeonatos e times
+vêm de arquivos em `dados/`, e um script em Python puro escreve o HTML deles
+(ver [Produtos, campeonatos e times](#produtos-campeonatos-e-times)).
 
 A identidade visual (astronomia, constelações, matemática, código e antiguidade clássica, com a mascote
 **Hipátia de Alexandria**) já usa a paleta oficial, o monograma e a Hipátia do kit de branding; a
@@ -25,14 +27,18 @@ tipografia ainda é provisória. Tudo o que falta está marcado no código e lis
 │   ├── img/          ← imagens WebP (1200 e 640 px), limbo.svg, astrolabio.svg (sem JS)
 │   ├── icons.svg     ← sprite de ícones, pictogramas dos times e o monograma (#aaic-monograma)
 │   └── favicon.png
+├── dados/            ← loja.json, campeonatos.json e times.json (a fonte desses três conteúdos)
+├── ferramentas/
+│   └── gerar_conteudo.py ← escreve no HTML o que está em dados/ (só Python 3, sem instalar nada)
 ├── CNAME             ← domínio aaic.com.br (não mexer)
 └── .nojekyll         ← o Pages publica os arquivos como estão, sem passar pelo Jekyll
 ```
 
 ## Como editar e publicar
 
-1. **Editar:** os arquivos HTML do repositório são a fonte da verdade (não existe gerador nem build).
-   Dá para editar pelo navegador abrindo o repositório no GitHub e apertando `.` (abre o github.dev).
+1. **Editar:** os arquivos HTML do repositório são a fonte da verdade, com uma exceção: produtos,
+   campeonatos e times se editam em `dados/` (veja abaixo). Dá para editar pelo navegador abrindo o
+   repositório no GitHub e apertando `.` (abre o github.dev).
 2. **Testar localmente:** na pasta do site, rode `python3 -m http.server 8080` e abra
    <http://localhost:8080>. Abrir o HTML direto pelo arquivo (`file://`) não carrega os ícones do sprite.
 3. **Publicar:** faça commit no `main`. O Pages atualiza em cerca de 1 minuto, e o cache dos
@@ -63,10 +69,8 @@ Copie um bloco existente e edite. Os blocos já trazem a revelação no scroll (
 
 - **Evento** (`eventos.html`): duplique um `<article class="event-item" data-reveal>…</article>`. O
   primeiro (`event-item--feature`) é o destaque em largura total.
-- **Time** (`times.html`): duplique um `<li class="team-row" data-reveal>…</li>` e escolha o
-  pictograma (`#p-futsal`, `#p-basquete`, `#p-volei`, `#p-handebol`, `#p-esports`, `#p-cheer`).
-- **Produto** (`loja.html`): duplique um `<li data-reveal>…</li>` da `.product-grid`.
-- **Campeonato** (`campeonatos.html`): já existe um bloco do InterUFF comentado; descomente e preencha.
+- **Time, produto ou campeonato:** não edite o HTML; veja
+  [Produtos, campeonatos e times](#produtos-campeonatos-e-times).
 - **Manual do calouro** (`trotes.html`, "Calouros" no menu, logo depois de "Início"):
   - **Grupo do WhatsApp:** o link aparece em dois lugares da página (botão do topo e passo 01), ambos
     marcados com `TODO(conteúdo)`. Até o grupo abrir, os dois apontam para o Instagram e o topo mostra o
@@ -85,6 +89,35 @@ Copie um bloco existente e edite. Os blocos já trazem a revelação no scroll (
     `npx -y sharp-cli@6.1.0 -i foto.jpg -o assets/img/ --autoOrient -f webp -q 72 resize 1200 --withoutEnlargement`
     (o arquivo sai com o nome da foto; renomeie para `foto-1200.webp`)
 
+## Produtos, campeonatos e times
+
+A loja, os campeonatos e os times aparecem em mais de um lugar: na página de cada um, nos cards do índice
+da home, nas contagens ("Seis modalidades") e na descrição da página no Google. Por isso eles têm uma
+fonte só, em `dados/`, e o script `ferramentas/gerar_conteudo.py` escreve o HTML de todos esses lugares.
+
+1. Edite `dados/loja.json`, `dados/campeonatos.json` ou `dados/times.json`.
+2. Na raiz do site, rode `python3 ferramentas/gerar_conteudo.py`.
+3. Confira as páginas localmente e faça o commit dos dados junto com o HTML.
+
+O script só mexe no que fica entre os comentários `<!-- gerado:… -->` e `<!-- /gerado:… -->` (não edite
+o HTML dentro deles, que será sobrescrito) e nas `meta description` de `loja.html`, `times.html` e
+`campeonatos.html`. Se algo estiver errado nos dados, ele avisa e não muda nada. Para só conferir se as
+páginas estão em dia, rode com `--verificar`.
+
+- **Esconder sem apagar:** `"visivel": false` em qualquer item.
+- **Ordem:** a da lista no JSON. Na home, o destaque é o primeiro produto à venda (ou em pré-venda) e o
+  primeiro campeonato com status ativo.
+- **Imagens:** informe só o nome-base (`"imagem": "camisa-aaic"` usa `assets/img/camisa-aaic-640.webp` e
+  `-1200.webp`). Largura e altura são lidas do arquivo. Sem imagem, entra o placeholder com `TODO(identidade)`.
+
+| Arquivo | Campos | Status aceitos |
+|---|---|---|
+| `loja.json` | `id`, `nome`, `chamada` (como o produto aparece numa frase: "a camisa da AAIC", "os bottons"), `status`; opcionais: `descricao` (frase do card da home), `imagem`, `alt`, `link` (formulário ou página de compra), `cta` (texto do link no card da home) | `a-venda`, `pre-venda`, `em-breve`, `esgotado` |
+| `campeonatos.json` | `id`, `nome`, `status`; opcionais: `frequencia`, `texto`, `resumo` (card da home), `imagem`, `alt`, `duotone`, `pendencia` (vira `TODO(identidade)`), `link` (`{"rotulo", "url"}`), `artigo` ("o", padrão; ou "a") | `inscricoes-abertas`, `em-andamento`, `em-breve`, `encerrado` |
+| `times.json` | `id`, `nome`, `icone` (pictograma do `icons.svg`: `p-futsal`, `p-basquete`, `p-volei`, `p-handebol`, `p-esports`, `p-cheer`), `status`; opcionais: `detalhe` (ex.: "Masculino e feminino"), `foto`, `alt` | `treinos-abertos`, `seletiva-aberta`, `em-atividade`, `em-breve` |
+
+Para criar um status novo ou mudar o rótulo de um chip, edite as tabelas `STATUS_*` no topo do script.
+
 ## Pendências da identidade
 
 Liste tudo que falta com:
@@ -99,9 +132,9 @@ Nos times, o formato recomendado vem escrito no centro; na loja, o espaço fica 
 | Item | Onde | Como trocar | Formato |
 |---|---|---|---|
 | **Tipografia** | `style.css`: `@font-face` e `--font-display`, `--font-text`, `--font-mono` | Substitua os woff2 em `assets/fonts/` (com a licença) e os nomes | woff2, subset latino |
-| **Fotos dos times** | `data-placeholder="time-*"` em `times.html` | Troque o `.placeholder` por `<img>` | 1600×1200 |
-| **Fotos dos produtos** | `data-placeholder="produto-*"` em `loja.html` (caneca, bottons, uniforme) | Troque o `.placeholder` por `<img class="product-card-img">`, como na camisa | 1200×1200, fundo neutro |
-| **Arte do campeonato** | `lleague-*.webp` (Lovelace League, identidade antiga roxa) em `campeonatos.html` e na home | Hoje aparece em duotone verde; troque pela arte nova | WebP 1200 e 640 |
+| **Fotos dos times** | `data-placeholder="time-*"` em `times.html` | Salve `assets/img/<nome>-640.webp` e `-1200.webp`, ponha `"foto": "<nome>"` no time em `dados/times.json` e rode o gerador | 1600×1200 |
+| **Fotos dos produtos** | `data-placeholder="produto-*"` em `loja.html` (caneca, bottons, uniforme) | Salve a foto em `assets/img/`, ponha `"imagem"` e `"alt"` no produto em `dados/loja.json` e rode o gerador | 1200×1200, fundo neutro |
+| **Arte do campeonato** | `lleague-*.webp` (Lovelace League, identidade antiga roxa) em `campeonatos.html` e na home | Hoje aparece em duotone verde; troque pela arte nova no campo `imagem` de `dados/campeonatos.json` (e apague `pendencia`) | WebP 1200 e 640 |
 
 ### O que já veio do kit de branding
 
@@ -164,7 +197,9 @@ do acesso**. O aluno de Hipátia, Sinésio, conta que projetou um astrolábio co
 ## Decisões técnicas
 
 - **Sem build e sem bibliotecas:** o deploy continua sendo "os arquivos da raiz". Não há dependência
-  externa em tempo de execução: as fontes são locais e não existe CDN.
+  externa em tempo de execução: as fontes são locais e não existe CDN. O `gerar_conteudo.py` roda só na
+  máquina de quem edita, e o HTML que ele escreve vai para o repositório: o site não depende de JavaScript
+  para mostrar produtos, campeonatos e times.
 - **Desempenho:**
   - Fontes em subset latino (~78 KB no total), duas com `preload`.
   - Imagens WebP com `srcset` e `loading="lazy"`.
