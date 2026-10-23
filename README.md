@@ -30,6 +30,7 @@ tipografia ainda é provisória. Tudo o que falta está marcado no código e lis
 ├── dados/            ← loja.json, campeonatos.json e times.json (a fonte desses três conteúdos)
 ├── ferramentas/
 │   └── gerar_conteudo.py ← escreve no HTML o que está em dados/ (só Python 3, sem instalar nada)
+├── robots.txt, sitemap.xml ← rastreamento pelo Google (ver [SEO](#seo))
 ├── CNAME             ← domínio aaic.com.br (não mexer)
 └── .nojekyll         ← o Pages publica os arquivos como estão, sem passar pelo Jekyll
 ```
@@ -193,6 +194,23 @@ do acesso**. O aluno de Hipátia, Sinésio, conta que projetou um astrolábio co
   direto no estado final, sem animação.
 - **Sem JavaScript:** mostra `assets/img/astrolabio.svg`, um retrato estático. Se as cores da marca
   mudarem, gere esse arquivo de novo a partir da página.
+
+## SEO
+
+Tudo fica no `<head>` e em dois arquivos da raiz; o corpo das páginas não carrega nada de SEO.
+
+- **Títulos e descrições** citam os três cursos por extenso (Ciência da Computação, Sistemas de
+  Informação e IA e Ciência de Dados), para o site aparecer nas buscas por qualquer um deles. As
+  descrições de `loja.html`, `times.html` e `campeonatos.html` vêm do `gerar_conteudo.py`.
+- **`sitemap.xml`** lista as 8 páginas com a mesma URL do `canonical` de cada uma. Criou ou removeu uma
+  página? Atualize o sitemap.
+- **Dados estruturados (JSON-LD)**, no fim do `<head>`:
+  - Home: `WebSite` e `SportsOrganization`. Mudou o nome, o e-mail, o Instagram ou o endereço? Atualize
+    ali também.
+  - Páginas internas: `BreadcrumbList` com os mesmos rótulos da trilha "AAIC / Página" do topo.
+- **Fora do repositório:** a propriedade de domínio no Google Search Console (verificada por TXT no
+  DNS), com o `sitemap.xml` enviado, e o Perfil da Empresa no Google. Links vindos do site do IC, dos
+  centros acadêmicos e da bio do Instagram são o que mais ajuda nas buscas genéricas.
 
 ## Decisões técnicas
 
